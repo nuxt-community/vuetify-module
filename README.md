@@ -14,7 +14,7 @@
 ## Setup
 
 - Add `@nuxtjs/vuetify` dependency using yarn or npm to your project
-- Add `@nuxtjs/vuetify` to `modules` section of `nuxt-community
+- Add `@nuxtjs/vuetify` to `modules` section of your `nuxt.config.js`
 
 ```js
 {
