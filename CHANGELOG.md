@@ -1,29 +1,15 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [0.5.3](https://github.com/nuxt/modules/compare/@nuxtjs/vuetify@0.5.2...@nuxtjs/vuetify@0.5.3) (2019-02-06)
-
-**Note:** Version bump only for package @nuxtjs/vuetify
+<a name="0.0.1"></a>
+## 0.0.1 (2019-02-08)
 
 
+### Bug Fixes
 
-
-
-## [0.5.2](https://github.com/nuxt/modules/compare/@nuxtjs/vuetify@0.5.1...@nuxtjs/vuetify@0.5.2) (2019-01-22)
-
-**Note:** Version bump only for package @nuxtjs/vuetify
-
-
-
-
-
-## [0.5.1](https://github.com/nuxt/modules/compare/@nuxtjs/vuetify@0.5.0...@nuxtjs/vuetify@0.5.1) (2019-01-11)
-
-**Note:** Version bump only for package @nuxtjs/vuetify
-
-
+* **readme:** Typo ([5496ade](https://github.com/nuxt-community/vuetify-module/commit/5496ade))
+* run module in build:before hook ([4676a34](https://github.com/nuxt-community/vuetify-module/commit/4676a34)), closes [#1](https://github.com/nuxt-community/vuetify-module/issues/1)
 
 
 
