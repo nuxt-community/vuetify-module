@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/vuetify",
-  "version": "0.0.1",
+  "version": "0.5.4",
   "description": "Vuetify Module for Nuxt.js",
   "license": "MIT",
   "contributors": [
