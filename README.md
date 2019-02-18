@@ -42,7 +42,7 @@ Adds `vuetify.css` to the start of `options.css[]`
 ### `treeShake`
 - Default: `false`
 Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://vuetifyjs.com/en/guides/a-la-carte).
-Make sure you add the `vuetify-loader` dependency using yarn or npm to your project first.
+Make sure you add the `vuetify-loader`, `stylus-loader` and `stylus` dependencies using yarn or npm to your project first.
 
 ## Development
 
