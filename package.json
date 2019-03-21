@@ -54,7 +54,7 @@
     }
   },
   "dependencies": {
-    "vuetify": "^1.5.5"
+    "vuetify": "^2.0.0-alpha.9"
   },
   "peerDependencies": {
     "vuetify-loader": "^1.2.1"

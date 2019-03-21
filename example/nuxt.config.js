@@ -9,5 +9,15 @@ module.exports = {
   },
   modules: [
     { handler: require('../') }
-  ]
+  ],
+  vuetify: {
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: '#ff0000'
+        }
+      }
+    }
+  }
 }
