@@ -9,10 +9,13 @@ const get = path => request(url(path))
 describe('basic', () => {
   let nuxt
 
-  beforeAll(async () => {
+  test('build', async () => {
     config.dev = false
     nuxt = new Nuxt(config)
+    await nuxt.ready()
+
     await new Builder(nuxt).build()
+
     await nuxt.listen(3000)
   }, 60000)
 
@@ -21,7 +24,7 @@ describe('basic', () => {
   })
 
   test('render', async () => {
-    let html = await get('/')
-    expect(html).toContain('Works!')
+    const html = await get('/')
+    expect(html).toContain('v-navigation-drawer--fixed')
   })
 })
