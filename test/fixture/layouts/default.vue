@@ -1,54 +1,54 @@
 <template>
   <v-app id="inspire" dark>
     <v-navigation-drawer v-model="drawer" fixed clipped app>
-      <v-list dense>
-        <v-list-tile v-for="item in items" :key="item.text">
-          <v-list-tile-action>
+      <v-list>
+        <v-list-item v-for="item in items" :key="item.text" link>
+          <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+          </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>
               {{ item.text }}
             </v-list-item-title>
           </v-list-item-content>
-        </v-list-tile>
-        <v-subheader class="mt-3 grey--text text--darken-1">
-          SUBSCRIPTIONS
+        </v-list-item>
+        <v-subheader class="mt-3 grey--text text--darken-1 text-uppercase">
+          Subscriptions
         </v-subheader>
         <v-list>
-          <v-list-tile v-for="item in items2" :key="item.text">
-            <v-list-tile-avatar>
+          <v-list-item v-for="item in items2" :key="item.text" link>
+            <v-list-item-avatar>
               <img :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`" alt="">
-            </v-list-tile-avatar>
+            </v-list-item-avatar>
             <v-list-item-title v-text="item.text" />
-          </v-list-tile>
+          </v-list-item>
         </v-list>
-        <v-list-tile class="mt-3">
-          <v-list-tile-action>
+        <v-list-item class="mt-3">
+          <v-list-item-action>
             <v-icon color="grey darken-1">
-              add_circle_outline
+              mdi-plus-circle-outline
             </v-icon>
-          </v-list-tile-action>
+          </v-list-item-action>
           <v-list-item-title class="grey--text text--darken-1">
             Browse Channels
           </v-list-item-title>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-action>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-action>
             <v-icon color="grey darken-1">
-              settings
+              mdi-settings
             </v-icon>
-          </v-list-tile-action>
+          </v-list-item-action>
           <v-list-item-title class="grey--text text--darken-1">
             Manage Subscriptions
           </v-list-item-title>
-        </v-list-tile>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar color="red" dense fixed clipped-left app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-icon class="mx-3">
-        fa-youtube
+        mdi-youtube
       </v-icon>
       <v-toolbar-title class="mr-5 align-center">
         <span class="title">Youtube</span>
@@ -58,7 +58,7 @@
         <v-text-field
           placeholder="Search..."
           single-line
-          append-icon="search"
+          append-icon="mdi-magnify"
           color="white"
           hide-details
         />
@@ -79,11 +79,13 @@ export default {
     return {
       drawer: true,
       items: [
-        { icon: 'trending_up', text: 'Most Popular' },
-        { icon: 'subscriptions', text: 'Subscriptions' },
-        { icon: 'history', text: 'History' },
-        { icon: 'featured_play_list', text: 'Playlists' },
-        { icon: 'watch_later', text: 'Watch Later' }
+        { icon: 'mdi-home', text: 'Home' },
+        { icon: 'mdi-fire', text: 'Trending' },
+        { icon: 'mdi-youtube-subscription', text: 'Subscriptions' },
+        { icon: 'mdi-folder', text: 'Library' },
+        { icon: 'mdi-history', text: 'History' },
+        { icon: 'mdi-clock', text: 'Watch Later' },
+        { icon: 'mdi-thumb-up', text: 'Liked videos' }
       ],
       items2: [
         { picture: 28, text: 'Joseph' },

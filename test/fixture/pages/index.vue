@@ -5,7 +5,7 @@
         <v-tooltip right>
           <v-btn slot="activator" icon large href="" target="_blank">
             <v-icon large>
-              code
+              mdi-code-tags
             </v-icon>
           </v-btn>
           <span>Source</span>

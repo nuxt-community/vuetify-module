@@ -48,7 +48,7 @@ Make sure you add the `vuetify-loader`, `stylus-loader` and `stylus` dependencie
 
 - Clone this repository
 - Install dependencies using `yarn install` or `npm install`
-- Start development server using `npm run dev`
+- Start development server using `yarn dev` or `npm run dev`
 
 ## License
 
