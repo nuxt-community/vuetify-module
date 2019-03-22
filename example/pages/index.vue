@@ -1,18 +1,22 @@
 <template>
-  <v-app>
-    <v-app-bar color="primary">
-      <v-app-bar-nav-icon />
-      <v-toolbar-title>Page title</v-toolbar-title>
-      <v-spacer />
-      <v-btn icon>
-        <v-icon>sync</v-icon>
-      </v-btn>
-    </v-app-bar>
-  </v-app>
+  <v-container fill-height>
+    <v-layout justify-center align-center>
+      <v-flex shrink>
+        <v-tooltip right>
+          <v-btn
+            slot="activator"
+            icon
+            large
+            href=""
+            target="_blank"
+          >
+            <v-icon large>
+              code
+            </v-icon>
+          </v-btn>
+          <span>Source</span>
+        </v-tooltip>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
-
-<script>
-export default {
-
-}
-</script>
