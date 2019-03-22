@@ -10,6 +10,5 @@ module.exports = {
   modules: [
     { handler: require('../') }
   ],
-  vuetify: {
-  }
+  vuetify: {}
 }

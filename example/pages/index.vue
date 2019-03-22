@@ -3,8 +3,10 @@
     <v-layout justify-center align-center>
       <v-flex shrink>
         <v-tooltip right>
-          <v-btn icon large href="" target="_blank" slot="activator">
-            <v-icon large>code</v-icon>
+          <v-btn slot="activator" icon large href="" target="_blank">
+            <v-icon large>
+              code
+            </v-icon>
           </v-btn>
           <span>Source</span>
         </v-tooltip>
