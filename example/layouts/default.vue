@@ -7,7 +7,9 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>{{ item.text }}</v-list-tile-title>
+            <v-list-tile-title>
+              {{ item.text }}
+            </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-subheader class="mt-3 grey--text text--darken-1">
@@ -16,7 +18,7 @@
         <v-list>
           <v-list-tile v-for="item in items2" :key="item.text" avatar>
             <v-list-tile-avatar>
-              <img :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`" alt>
+              <img :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`" alt="">
             </v-list-tile-avatar>
             <v-list-tile-title v-text="item.text" />
           </v-list-tile>
