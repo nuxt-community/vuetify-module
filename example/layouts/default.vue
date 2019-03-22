@@ -65,7 +65,7 @@
       </v-layout>
     </v-app-bar>
     <v-content>
-        </Nuxt>
+      <Nuxt />
     </v-content>
   </v-app>
 </template>

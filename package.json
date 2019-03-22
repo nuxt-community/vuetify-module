@@ -25,18 +25,6 @@
   "files": [
     "lib"
   ],
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "esmodules": true
-          }
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "vuetify": "^2.0.0-alpha.9"
   },
