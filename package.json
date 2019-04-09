@@ -5,7 +5,10 @@
   "license": "MIT",
   "contributors": [
     {
-      "name": "pooya parsa <pooya@pi0.ir>"
+      "name": "Pooya Parsa (@pi0)"
+    },
+    {
+      "name": "Kevin Marrec (@kevinmarrec)"
     }
   ],
   "main": "lib/module.js",
