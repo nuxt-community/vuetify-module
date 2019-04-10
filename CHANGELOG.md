@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0-alpha.0](https://github.com/nuxt-community/vuetify-module/compare/v0.5.5...v1.0.0-alpha.0) (2019-04-10)
+
+
+### Features
+
+* upgrade to new vuetify 2 spec ([6ff1910](https://github.com/nuxt-community/vuetify-module/commit/6ff1910))
+
+
+### BREAKING CHANGES
+
+* Removed `css`, implemented `assets` option
+
+
+
 <a name="0.5.5"></a>
 ## [0.5.5](https://github.com/nuxt-community/vuetify-module/compare/v0.5.4...v0.5.5) (2019-02-14)
 
