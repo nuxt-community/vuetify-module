@@ -49,10 +49,5 @@
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "standard-version": "^5.0.2"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
   }
 }
