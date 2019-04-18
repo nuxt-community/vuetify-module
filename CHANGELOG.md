@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0-alpha.4](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2019-04-18)
+
+
+### Bug Fixes
+
+* always setup sass loader options ([1709f2b](https://github.com/nuxt-community/vuetify-module/commit/1709f2b))
+
+
+
 # [1.0.0-alpha.3](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2019-04-18)
 
 
