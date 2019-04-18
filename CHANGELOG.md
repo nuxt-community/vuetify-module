@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2019-04-18)
+
+
+### Bug Fixes
+
+* hotfix when module options is not set in config ([4cfa0ab](https://github.com/nuxt-community/vuetify-module/commit/4cfa0ab))
+
+
+
 # [1.0.0-alpha.2](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2019-04-18)
 
 
