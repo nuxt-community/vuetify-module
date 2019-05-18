@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "deepmerge": "^3.2.0",
-    "fibers": "^3.1.1",
+    "fibers": "^4.0.1",
     "sass": "^1.19.0",
     "sass-loader": "^7.1.0",
     "vuetify": "^2.0.0-alpha.18",
