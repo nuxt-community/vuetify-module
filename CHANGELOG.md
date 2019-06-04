@@ -1,6 +1,24 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.0.0-beta.0](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.6...v1.0.0-beta.0) (2019-06-04)
+
+
+### Bug Fixes
+
+* apply vuetify vars only for sass files ([#25](https://github.com/nuxt-community/vuetify-module/issues/25)) ([f8f0392](https://github.com/nuxt-community/vuetify-module/commit/f8f0392))
+* don't override sassLoader data ([3c1c1e6](https://github.com/nuxt-community/vuetify-module/commit/3c1c1e6))
+* fix tooltip activator behavior ([feeacd8](https://github.com/nuxt-community/vuetify-module/commit/feeacd8))
+* use theme primary color for toolbar ([3bc02cc](https://github.com/nuxt-community/vuetify-module/commit/3bc02cc))
+
+
+### Features
+
+* customVariables ([d2b3b8a](https://github.com/nuxt-community/vuetify-module/commit/d2b3b8a))
+* roboto font display swap ([feac192](https://github.com/nuxt-community/vuetify-module/commit/feac192))
+
+
 
 # [1.0.0-alpha.6](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2019-05-18)
 
