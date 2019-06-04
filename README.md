@@ -32,6 +32,37 @@
 
 ## Module options
 
+### `customVariables`
+- Type: `Array`
+  - Items: `String`
+- Default: `[]`
+
+Provide a way to customize Vuetify SASS variables.  
+**Only works with [tree-shaking](#treeShake).**
+
+Usage example : 
+
+```scss
+// assets/variables.scss
+@import '~vuetify/src/styles/styles.sass';
+
+// The variables you want to modify
+$font-size-root: 14px;
+// For updating SASS lists
+$material-light: map-merge($material-light, ( cards: blue ));
+$btn-border-radius: 0px;
+```
+
+```js
+// nuxt.config.js
+export default {
+  vuetify: {
+    customVariables: ['~/assets/variables.scss']
+  }
+}
+```
+
+
 ### `defaultAssets`
 - Type: `Object` or `Boolean` 
 - Default: 
