@@ -31,7 +31,7 @@
 
 ## Module options
 
-### `assets`
+### `defaultAssets`
 - Type: `Object` or `Boolean` 
 - Default: 
 ```js
@@ -45,9 +45,13 @@ Automatically handle **Roboto** font & **Material Design Icons**.
 
 These assets are handled automatically by default to provide a zero-configuration which let you play directly with Vuetify.
 
-We recommend to set it to `false` and : 
-1) Handle **Roboto** web font loading with [nuxt-webfontloader](https://github.com/Developmint/nuxt-webfontloader)
-2) Choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://next.vuetifyjs.com/en/framework/icons)
+`defaultAssets.font` automatically adds the **Roboto** font stylesheet from official google fonts to load the font with `font-display: swap`.
+You can disable it if you plan to use different font or manually handle font loading.
+
+`defaultAssets.icons` automatically adds the icons stylesheet from [Material Design Icons](https://materialdesignicons.com) CDN to load all the icons.
+You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://next.vuetifyjs.com/en/framework/icons)
+
+You can also set `defaultAssets` to `false` to prevent any automatic add of these two assets.
 
 ### `treeShake`
 - Type: `Boolean`
