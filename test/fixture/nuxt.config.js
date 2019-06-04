@@ -1,4 +1,5 @@
 const { resolve } = require('path')
+const colors = require('vuetify/es5/util/colors').default
 
 module.exports = {
   rootDir: resolve(__dirname, '../..'),
@@ -18,7 +19,7 @@ module.exports = {
       dark: true,
       themes: {
         dark: {
-          primary: '#ff0000'
+          primary: colors.red
         }
       }
     }
