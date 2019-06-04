@@ -3,11 +3,19 @@
     <v-layout justify-center align-center>
       <v-flex shrink>
         <v-tooltip right>
-          <v-btn slot="activator" icon large href="" target="_blank">
-            <v-icon large>
-              mdi-code-tags
-            </v-icon>
-          </v-btn>
+          <template #activator="{ on }">
+            <v-btn
+              icon
+              large
+              href=""
+              target="_blank"
+              v-on="on"
+            >
+              <v-icon large>
+                mdi-code-tags
+              </v-icon>
+            </v-btn>
+          </template>
           <span>Source</span>
         </v-tooltip>
       </v-flex>
