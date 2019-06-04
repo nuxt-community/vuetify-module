@@ -29,7 +29,7 @@
     "vuetify": "^1.5.14"
   },
   "peerDependencies": {
-    "vuetify-loader": "^1.2.1"
+    "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
