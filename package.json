@@ -26,7 +26,7 @@
     "lib"
   ],
   "dependencies": {
-    "vuetify": "^1.5.7"
+    "vuetify": "^1.5.14"
   },
   "peerDependencies": {
     "vuetify-loader": "^1.2.1"
@@ -34,19 +34,19 @@
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
     "babel-eslint": "^10.0.1",
-    "codecov": "^3.2.0",
-    "eslint": "^5.15.3",
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.4.1",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
-    "jest": "^24.5.0",
-    "nuxt-edge": "^2.5.1-25886888.5d7757bf",
+    "jest": "^24.8.0",
+    "nuxt-edge": "^2.8.0-25993448.f2c08897",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
-    "standard-version": "^5.0.2"
+    "standard-version": "^6.0.1"
   }
 }
