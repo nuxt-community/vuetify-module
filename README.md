@@ -1,4 +1,4 @@
-# Vuetify 2 Alpha Module
+# Vuetify 2 Module
 
 [![David-DM][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
@@ -7,9 +7,10 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 
-> Vuetify 2 Alpha Module for Nuxt.js
+> Vuetify 2 Module for Nuxt.js
 
-[📖 **Release Notes**](./CHANGELOG.md)
+[📖 **Release Notes**](./CHANGELOG.md)  
+[🏷 **Module for Vuetify 1.5.x `[master]`**](https://github.com/nuxt-community/vuetify-module/tree/master)
 
 ## Setup
 
