@@ -30,7 +30,7 @@
     "fibers": "^4.0.1",
     "sass": "^1.20.3",
     "sass-loader": "^7.1.0",
-    "vuetify": "^2.0.0-beta.1",
+    "vuetify": "^2.0.0-beta.2",
     "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
