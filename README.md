@@ -11,15 +11,18 @@
 
 > [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
 
-[📖 **Release Notes**](./CHANGELOG.md)  
-[🏷 **Module for Vuetify 1.5.x `[master]`**](https://github.com/nuxt-community/vuetify-module/tree/master)
+## Infos
+
+- [📖 Release Notes](./CHANGELOG.md)
+- [🏀 Online playground](https://codesandbox.io/s/nuxtjs-vuetify-olyxr)
+- [🏷 Module for Vuetify 1.5.x `[master]`](https://github.com/nuxt-community/vuetify-module/tree/master)
 
 ## Setup
 
 - Add `@nuxtjs/vuetify@next` dependency to your project
 
 ```bash
-npm install --save-dev @nuxtjs/vuetify # or yarn add --dev @nuxtjs/vuetify
+npm install --save-dev @nuxtjs/vuetify@next # or yarn add --dev @nuxtjs/vuetify@next
 ```
 
 - Add `@nuxtjs/vuetify` to `devModules` section of your `nuxt.config.js`
