@@ -9,7 +9,7 @@
   <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://badgen.net/npm/license/@nuxtjs/vuetify" alt="License"></a>
 </p>
 
-> Vuetify 2 Module for Nuxt.js
+> [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
 
 [📖 **Release Notes**](./CHANGELOG.md)  
 [🏷 **Module for Vuetify 1.5.x `[master]`**](https://github.com/nuxt-community/vuetify-module/tree/master)
