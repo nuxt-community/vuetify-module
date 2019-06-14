@@ -1,4 +1,13 @@
-# Vuetify 2 Module
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/904724/59509947-c14eca80-8eb2-11e9-807c-14e7cc72eecc.png" alt="nuxt-tailwindcss" width="500"/>
+</p>
+<p align="center">
+  <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/v/@nuxtjs/vuetify/next.svg?style=flat-square" alt="npm downloads"></a>
+  <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/dt/@nuxtjs/vuetify.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://circleci.com/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/circleci/project/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="circle ci"></a>
+  <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module/next.svg?style=flat-square" alt="coverage"></a>
+  <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://badgen.net/npm/license/@nuxtjs/vuetify" alt="License"></a>
+</p>
 
 [![David-DM][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
@@ -14,7 +23,12 @@
 
 ## Setup
 
-- Add `@nuxtjs/vuetify@next` as devDependency using yarn or npm to your project
+- Add `@nuxtjs/vuetify@next` dependency to your project
+
+```bash
+npm install --save-dev @nuxtjs/vuetify # or yarn add --dev @nuxtjs/vuetify
+```
+
 - Add `@nuxtjs/vuetify` to `devModules` section of your `nuxt.config.js`
 
 ```js
