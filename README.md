@@ -22,14 +22,14 @@
 - Add `@nuxtjs/vuetify@next` dependency to your project
 
 ```bash
-npm install --save-dev @nuxtjs/vuetify@next # or yarn add --dev @nuxtjs/vuetify@next
+npm install --save @nuxtjs/vuetify@next # or yarn add @nuxtjs/vuetify@next
 ```
 
-- Add `@nuxtjs/vuetify` to `devModules` section of your `nuxt.config.js`
+- Add `@nuxtjs/vuetify` to `modules` section of your `nuxt.config.js`
 
 ```js
 {
-  devModules: [
+  modules: [
     '@nuxtjs/vuetify'
   ],
 
