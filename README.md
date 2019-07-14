@@ -99,9 +99,8 @@ You can also set `defaultAssets` to `false` to prevent any automatic add of thes
 - Type: `Boolean`
 - Default: `process.env.NODE_ENV === 'production'`
 
-Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/guides/a-la-carte).  
+Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
-
 
 ## Development
 
