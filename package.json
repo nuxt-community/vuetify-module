@@ -12,13 +12,13 @@
     }
   ],
   "main": "lib/module.js",
-  "repository": "nuxt-community/vuetify-module",
+  "repository": "https://github.com/nuxt-community/vuetify-module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "dev": "nuxt test/fixture",
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.vue lib test",
     "test": "yarn lint && jest",
     "release": "yarn test && standard-version --prerelease && git push --follow-tags && npm publish --tag next"
   },
@@ -28,17 +28,20 @@
   "dependencies": {
     "deepmerge": "^4.0.0",
     "fibers": "^4.0.1",
-    "sass": "^1.22.3",
+    "sass": "^1.22.4",
     "sass-loader": "^7.1.0",
     "vuetify": "^2.0.0-beta.7",
     "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "codecov": "^3.5.0",
-    "eslint": "^6.0.1",
-    "jest": "^24.8.0",
-    "nuxt-edge": "^2.9.0-26035210.efd242ad",
-    "standard-version": "^6.0.1"
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest",
+    "standard-version": "latest"
   }
 }
