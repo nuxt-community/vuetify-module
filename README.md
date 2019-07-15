@@ -6,7 +6,7 @@
   <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/dt/@nuxtjs/vuetify.svg?style=flat-square" alt="npm version"></a>
   <a href="https://circleci.com/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/circleci/project/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="circle ci"></a>
   <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module/next.svg?style=flat-square" alt="coverage"></a>
-  <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://badgen.net/npm/license/@nuxtjs/vuetify" alt="License"></a>
+  <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/l/@nuxtjs/vuetify.svg?style=flat-square" alt="License"></a>
 </p>
 
 > [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
