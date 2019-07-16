@@ -30,10 +30,8 @@ describe('disable all default assets', () => {
   beforeAll(async () => {
     nuxt = new Nuxt({
       ...config,
-      ...{
-        vuetify: {
-          defaultAssets: false
-        }
+      vuetify: {
+        defaultAssets: false
       }
     })
     await nuxt.ready()
