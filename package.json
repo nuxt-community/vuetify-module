@@ -12,7 +12,7 @@
     }
   ],
   "main": "lib/module.js",
-  "repository": "https://github.com/nuxt-community/vuetify-module",
+  "repository": "nuxt-community/vuetify-module",
   "publishConfig": {
     "access": "public"
   },
