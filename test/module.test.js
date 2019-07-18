@@ -48,3 +48,27 @@ describe('disable all default assets', () => {
     expect(html).not.toContain('https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css')
   })
 })
+
+describe('enable treeShake', () => {
+  let nuxt
+
+  beforeAll(async () => {
+    nuxt = new Nuxt({
+      ...config,
+      vuetify: {
+        treeShake: true
+      }
+    })
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('render', async () => {
+    const { html } = await nuxt.renderRoute('/')
+    expect(html).toContain('v-navigation-drawer--fixed')
+  })
+})
