@@ -49,7 +49,7 @@ describe('disable all default assets', () => {
   })
 })
 
-describe('enable treeShake', () => {
+describe.skip('enable treeShake', () => {
   let nuxt
 
   beforeAll(async () => {
