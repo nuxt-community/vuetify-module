@@ -75,7 +75,10 @@
 
 <script>
 export default {
-  data() {
+  head: {
+    title: 'Nuxt Vuetify fixture'
+  },
+  data () {
     return {
       drawer: true,
       items: [
