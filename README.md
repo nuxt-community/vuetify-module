@@ -104,7 +104,7 @@ These assets are handled automatically by default to provide a zero-configuratio
 You can disable it if you plan to use different font or manually handle font loading.
 
 `defaultAssets.icons` automatically adds the icons stylesheet from [Material Design Icons](https://materialdesignicons.com) CDN to load all the icons.
-You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://next.vuetifyjs.com/en/framework/icons)
+You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://next.vuetifyjs.com/en/customization/icons)
 
 You can also set `defaultAssets` to `false` to prevent any automatic add of these two assets.
 
