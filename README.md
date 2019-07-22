@@ -6,7 +6,7 @@
   <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/dt/@nuxtjs/vuetify.svg?style=flat-square" alt="npm version"></a>
   <a href="https://circleci.com/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/circleci/project/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="circle ci"></a>
   <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module/next.svg?style=flat-square" alt="coverage"></a>
-  <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://badgen.net/npm/license/@nuxtjs/vuetify" alt="License"></a>
+  <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/l/@nuxtjs/vuetify.svg?style=flat-square" alt="License"></a>
 </p>
 
 > [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
@@ -19,30 +19,43 @@
 
 ## Setup
 
-- Add `@nuxtjs/vuetify@next` dependency to your project
+1. Add `@nuxtjs/vuetify@next` dependency to your project
 
 ```bash
-npm install --save-dev @nuxtjs/vuetify@next # or yarn add --dev @nuxtjs/vuetify@next
+yarn add --dev @nuxtjs/vuetify@next # or npm install --save-dev @nuxtjs/vuetify@next
 ```
 
-- Add `@nuxtjs/vuetify` to `devModules` section of your `nuxt.config.js`
+2. Add `@nuxtjs/vuetify` to the `devModules` section of `nuxt.config.js`
+
+```js
+{
+  devModules: [
+    // Simple usage
+    '@nuxtjs/vuetify',
+
+    // With options
+    ['@nuxtjs/vuetify', { /* module options */ }]
+  ]
+}
+```
+
+### Using top level options
 
 ```js
 {
   devModules: [
     '@nuxtjs/vuetify'
   ],
-
-  // Vuetify options
   vuetify: {
-    //  theme: { }
+    /* module options */
   }
 }
 ```
 
-## Module options
+## Options
 
 ### `customVariables`
+
 - Type: `Array`
   - Items: `String`
 - Default: `[]`
@@ -72,8 +85,8 @@ export default {
 }
 ```
 
-
 ### `defaultAssets`
+
 - Type: `Object` or `Boolean` 
 - Default: 
 ```js
@@ -96,12 +109,12 @@ You can disable it and choose and setup your preferred icons preset by following
 You can also set `defaultAssets` to `false` to prevent any automatic add of these two assets.
 
 ### `treeShake`
+
 - Type: `Boolean`
 - Default: `process.env.NODE_ENV === 'production'`
 
-Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/guides/a-la-carte).  
+Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
-
 
 ## Development
 
