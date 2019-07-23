@@ -4,54 +4,20 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.0](https://github.com/nuxt-community/vuetify-module/compare/v0.5.7...v1.0.0) (2019-07-23)
 
+### Features
 
-* v1.0.0 next -> master (#62) ([f3ad5c5](https://github.com/nuxt-community/vuetify-module/commit/f3ad5c5)), closes [#62](https://github.com/nuxt-community/vuetify-module/issues/62) [#20](https://github.com/nuxt-community/vuetify-module/issues/20) [#23](https://github.com/nuxt-community/vuetify-module/issues/23) [#25](https://github.com/nuxt-community/vuetify-module/issues/25) [#55](https://github.com/nuxt-community/vuetify-module/issues/55) [#57](https://github.com/nuxt-community/vuetify-module/issues/57) [#58](https://github.com/nuxt-community/vuetify-module/issues/58) [#59](https://github.com/nuxt-community/vuetify-module/issues/59) [#60](https://github.com/nuxt-community/vuetify-module/issues/60) [#61](https://github.com/nuxt-community/vuetify-module/issues/61)
-
+- Upgrade to [Vuetify 2](https://github.com/vuetifyjs/vuetify/releases/tag/v2.0.0)
+- Implements `ctx.$vuetify`
+- Custom SASS variables
+- TypeScript typings
 
 ### BREAKING CHANGES
 
-* Removed `css`, implemented `assets` option
+Nuxt Module for Vuetify 2 brings lot of breaking changes
 
-* chore: update contributors
+Overall you'll need to follow [Vuetify 2 Upgrade guide](https://github.com/vuetifyjs/vuetify/releases/tag/v2.0.0#user-content-upgrade-guide) to correctly update your layouts, pages & components that were related to Vuetify in your project.
 
-* chore(deps): upgrade dependencies
-
-* chore(release): 1.0.0-alpha.0
-
-* improvement: require sass/fibers only if treeShake
-
-* chore: move jest options in jest.config.js
-
-* chore(deps): upgrade dependencies
-
-* chore: update Material Design Icons CDN version
-
-* chore: update README.md
-
-* chore: update release script to force prerelease
-
-* chore(release): 1.0.0-alpha.1
-
-* chore: update npm publish tag to next
-
-* chore(release): 1.0.0-alpha.2
-
-* fix: hotfix when module options is not set in config
-
-* chore(release): 1.0.0-alpha.3
-
-* fix: always setup sass loader options
-
-To be able to use `sass` even when treeShaking disabled (in development mode especially)
-
-* chore(release): 1.0.0-alpha.4
-
-* chore(deps): upgrade dependencies
-
-* chore(deps): upgrade dependencies
-
-* chore(release): 1.0.0-alpha.5
-
+Around the Nuxt module itself, it still passes options to Vuetify, but the custom options that change the behavior of what does the module for you have changed, you can find the new options in the **README** file.
 
 
 ## [1.0.0-beta.8](https://github.com/nuxt-community/vuetify-module/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2019-07-22)
