@@ -99,6 +99,13 @@ All notable changes to this project will be documented in this file. See [standa
 * Removed `css`, implemented `assets` option
 
 
+### [0.5.7](https://github.com/nuxt-community/vuetify-module/compare/v0.5.6...v0.5.7) (2019-07-22)
+
+
+
+### [0.5.6](https://github.com/nuxt-community/vuetify-module/compare/v0.5.5...v0.5.6) (2019-06-04)
+
+
 
 <a name="0.5.5"></a>
 ## [0.5.5](https://github.com/nuxt-community/vuetify-module/compare/v0.5.4...v0.5.5) (2019-02-14)
