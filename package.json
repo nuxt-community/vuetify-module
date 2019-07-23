@@ -1,44 +1,49 @@
 {
   "name": "@nuxtjs/vuetify",
-  "version": "0.5.7",
+  "version": "1.0.0-beta.8",
   "description": "Vuetify Module for Nuxt.js",
   "license": "MIT",
   "contributors": [
     {
-      "name": "pooya parsa <pooya@pi0.ir>"
+      "name": "Pooya Parsa (@pi0)"
+    },
+    {
+      "name": "Kevin Marrec (@kevinmarrec)"
     }
   ],
   "main": "lib/module.js",
+  "types": "types/index.d.ts",
   "repository": "nuxt-community/vuetify-module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "dev": "nuxt example",
-    "lint": "eslint lib test",
-    "test": "npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "dev": "nuxt test/fixture",
+    "lint": "eslint --ext .js,.vue lib test",
+    "test": "yarn lint && jest",
+    "release": "yarn test && standard-version --prerelease && git push --follow-tags && npm publish --tag next"
   },
-  "eslintIgnore": [
-    "lib/plugin.js"
-  ],
   "files": [
-    "lib"
+    "lib",
+    "types/*.d.ts"
   ],
   "dependencies": {
-    "vuetify": "^1.5.16"
-  },
-  "peerDependencies": {
+    "deepmerge": "^4.0.0",
+    "fibers": "^4.0.1",
+    "sass": "^1.22.7",
+    "sass-loader": "^7.1.0",
+    "vuetify": "^2.0.0",
     "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "codecov": "^3.5.0",
-    "eslint": "^6.1.0",
-    "jest": "^24.8.0",
-    "nuxt-edge": "^2.9.0-26062573.e448e3c9",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.7",
-    "standard-version": "^6.0.1"
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "latest",
+    "codecov": "latest",
+    "eslint": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nuxt-edge": "latest",
+    "standard-version": "latest"
   }
 }

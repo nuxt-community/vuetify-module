@@ -1,30 +1,74 @@
+jest.setTimeout(60000)
+
 const { Nuxt, Builder } = require('nuxt-edge')
-const request = require('request-promise-native')
 
-const config = require('../example/nuxt.config')
+const config = require('./fixture/nuxt.config')
+config.dev = false
 
-const url = path => `http://localhost:3000${path}`
-const get = path => request(url(path))
-
-describe('basic', () => {
+describe('module', () => {
   let nuxt
 
-  test('build', async () => {
-    config.dev = false
+  beforeAll(async () => {
     nuxt = new Nuxt(config)
     await nuxt.ready()
-
     await new Builder(nuxt).build()
-
-    await nuxt.listen(3000)
-  }, 60000)
+  })
 
   afterAll(async () => {
     await nuxt.close()
   })
 
   test('render', async () => {
-    const html = await get('/')
+    const { html } = await nuxt.renderRoute('/')
+    expect(html).toContain('v-navigation-drawer--fixed')
+  })
+})
+
+describe('disable all default assets', () => {
+  let nuxt
+
+  beforeAll(async () => {
+    nuxt = new Nuxt({
+      ...config,
+      vuetify: {
+        defaultAssets: false
+      }
+    })
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('render', async () => {
+    const { html } = await nuxt.renderRoute('/')
+    expect(html).not.toContain('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap')
+    expect(html).not.toContain('https://cdn.materialdesignicons.com/3.8.95/css/materialdesignicons.min.css')
+  })
+})
+
+describe.skip('enable treeShake', () => {
+  let nuxt
+
+  beforeAll(async () => {
+    nuxt = new Nuxt({
+      ...config,
+      vuetify: {
+        treeShake: true
+      }
+    })
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('render', async () => {
+    const { html } = await nuxt.renderRoute('/')
     expect(html).toContain('v-navigation-drawer--fixed')
   })
 })
