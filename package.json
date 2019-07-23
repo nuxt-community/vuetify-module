@@ -12,6 +12,7 @@
     }
   ],
   "main": "lib/module.js",
+  "types": "types/index.d.ts",
   "repository": "nuxt-community/vuetify-module",
   "publishConfig": {
     "access": "public"
@@ -23,7 +24,8 @@
     "release": "yarn test && standard-version --prerelease && git push --follow-tags && npm publish --tag next"
   },
   "files": [
-    "lib"
+    "lib",
+    "types/*.d.ts"
   ],
   "dependencies": {
     "deepmerge": "^4.0.0",

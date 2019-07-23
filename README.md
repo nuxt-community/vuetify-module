@@ -116,6 +116,24 @@ You can also set `defaultAssets` to `false` to prevent any automatic add of thes
 Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
 
+## TypeScript
+
+If you're using TypeScript, you'll need to add `@nuxtjs/vuetify` in your `compilerOptions` of your `tsconfig.json` :
+
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app",
+      "@nuxtjs/vuetify"
+    ]
+  }
+}
+```
+
+You'll then be able to have autocompletion in Context (`ctx.$vuetify`) and Vue instances (`this.$vuetify`).
+
 ## Development
 
 - Clone this repository
