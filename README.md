@@ -2,10 +2,10 @@
   <img src="https://user-images.githubusercontent.com/904724/59509947-c14eca80-8eb2-11e9-807c-14e7cc72eecc.png" alt="nuxt-tailwindcss" width="500"/>
 </p>
 <p align="center">
-  <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/v/@nuxtjs/vuetify/next.svg?style=flat-square" alt="npm downloads"></a>
+  <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/v/@nuxtjs/vuetify.svg?style=flat-square" alt="npm downloads"></a>
   <a href="https://npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/dt/@nuxtjs/vuetify.svg?style=flat-square" alt="npm version"></a>
   <a href="https://circleci.com/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/circleci/project/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="circle ci"></a>
-  <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module/next.svg?style=flat-square" alt="coverage"></a>
+  <a href="https://codecov.io/gh/nuxt-community/vuetify-module"><img src="https://img.shields.io/codecov/c/github/nuxt-community/vuetify-module.svg?style=flat-square" alt="coverage"></a>
   <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/l/@nuxtjs/vuetify.svg?style=flat-square" alt="License"></a>
 </p>
 
@@ -15,14 +15,14 @@
 
 - [📖 Release Notes](./CHANGELOG.md)
 - [🏀 Online playground](https://codesandbox.io/s/nuxtjs-vuetify-olyxr)
-- [🏷 Module for Vuetify 1.5.x `[master]`](https://github.com/nuxt-community/vuetify-module/tree/master)
+- [🏷 Module for Vuetify 1.5.x](https://github.com/nuxt-community/vuetify-module/tree/0.x)
 
 ## Setup
 
-1. Add `@nuxtjs/vuetify@next` dependency to your project
+1. Add `@nuxtjs/vuetify` dependency to your project
 
 ```bash
-yarn add --dev @nuxtjs/vuetify@next # or npm install --save-dev @nuxtjs/vuetify@next
+yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
 ```
 
 2. Add `@nuxtjs/vuetify` to the `devModules` section of `nuxt.config.js`
@@ -104,7 +104,7 @@ These assets are handled automatically by default to provide a zero-configuratio
 You can disable it if you plan to use different font or manually handle font loading.
 
 `defaultAssets.icons` automatically adds the icons stylesheet from [Material Design Icons](https://materialdesignicons.com) CDN to load all the icons.
-You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://next.vuetifyjs.com/en/customization/icons)
+You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://vuetifyjs.com/en/customization/icons)
 
 You can also set `defaultAssets` to `false` to prevent any automatic add of these two assets.
 
@@ -113,7 +113,7 @@ You can also set `defaultAssets` to `false` to prevent any automatic add of thes
 - Type: `Boolean`
 - Default: `process.env.NODE_ENV === 'production'`
 
-Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://next.vuetifyjs.com/en/customization/a-la-carte).
+Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
 
 ## Development
