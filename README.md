@@ -10,7 +10,7 @@
 > Vuetify Module for Nuxt.js
 
 [📖 **Release Notes**](./CHANGELOG.md)  
-[🏷 **Module for Vuetify 2.x `[next]`**](https://github.com/nuxt-community/vuetify-module/tree/next) 
+[🏷 **Module for Vuetify 2.x**](https://github.com/nuxt-community/vuetify-module) 
 
 ## Setup
 
