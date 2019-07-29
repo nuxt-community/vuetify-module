@@ -7,18 +7,26 @@ assignees: ''
 
 ---
 
-# Environment
-Module Version:
-Browsers:
-OS:
+**Module version**
+The version of the module you're using.
 
-# Reproduction Link
-<!-- Please fork and edit this CSB https://codesandbox.io/s/codesandbox-nuxt-v0k7i or create your own Github repository, then share the link here. -->
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-# Steps to reproduce
+**To Reproduce**
+<!-- Please fork and edit this CSB https://codesandbox.io/s/codesandbox-nuxt-v0k7i or create your own Github repository, then share the link here before reproduction steps. -->
 
-# Expected Behavior
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-# Actual Behavior
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-# Other comments
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Additional context**
+Add any other context about the problem here.
