@@ -14,7 +14,7 @@ The version of the module you're using.
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-<!-- Please fork and edit this CSB https://codesandbox.io/s/codesandbox-nuxt-v0k7i or create your own Github repository, then share the link here before reproduction steps. -->
+<!-- Please fork and edit this CSB https://codesandbox.io/s/nuxtjs-vuetify-v0k7i or create your own Github repository, then share the link here before reproduction steps. -->
 
 Steps to reproduce the behavior:
 1. Go to '...'
