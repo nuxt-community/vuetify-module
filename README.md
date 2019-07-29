@@ -14,7 +14,7 @@
 ## Infos
 
 - [📖 **Release Notes**](./CHANGELOG.md)
-- [🏀 **Online playground**](https://codesandbox.io/s/nuxtjs-vuetify-olyxr)
+- [🏀 **Online playground**](https://codesandbox.io/s/nuxtjs-vuetify-v0k7i)
 - [🏷 **Module for Vuetify 1.5.x**](https://github.com/nuxt-community/vuetify-module/tree/0.x)
 
 ## Setup
