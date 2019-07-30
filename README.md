@@ -93,7 +93,7 @@ export default {
 ```js
 {
   font: true,
-  icons: true
+  icons: 'mdi'
 }
 ```
 
@@ -104,10 +104,22 @@ These assets are handled automatically by default to provide a zero-configuratio
 `defaultAssets.font` automatically adds the **Roboto** font stylesheet from official google fonts to load the font with `font-display: swap`.
 You can disable it if you plan to use different font or manually handle font loading.
 
-`defaultAssets.icons` automatically adds the icons stylesheet from [Material Design Icons](https://materialdesignicons.com) CDN to load all the icons.
-You can disable it and choose and setup your preferred icons preset by following [Vuetify Icons documentation](https://vuetifyjs.com/en/customization/icons)
+`defaultAssets.icons` automatically adds the icons stylesheet from a CDN to load all the icons (**not optimized for production**).  
+Here are the accepted values for this option :
 
-You can also set `defaultAssets` to `false` to prevent any automatic add of these two assets.
+| Value | Icons |
+|-------|-------|
+| `'mdi'` (default) | [Material Designs Icons](https://materialdesignicons.com/) ([CDN](https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css)) 
+| `'md'`  | [Material Icons](https://material.io/resources/icons/) ([CDN](https://fonts.googleapis.com/css?family=Material+Icons))
+| `'fa'` |  [Font Awesome 5](https://fontawesome.com/icons) ([CDN](https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css))
+| `'fa4'` |  [Font Awesome 4](https://fontawesome.com/v4.7.0/icons/) ([CDN](https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css))
+| `false` | Disable auto add of the icons stylesheet
+
+> This option (if not set to `false`) will automatically override `icons.iconfont` Vuetify option so that Vuetify components use these icons.
+
+Please refer to [Vuetify Icons documentation](https://vuetifyjs.com/en/customization/icons) for more information about icons, notably for using only bunch of SVG icons instead of including all icons in your app.
+
+You can also set the whole `defaultAssets` option to `false` to prevent any automatic add of these two assets.
 
 ### `treeShake`
 
