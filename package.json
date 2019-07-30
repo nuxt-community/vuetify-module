@@ -41,9 +41,9 @@
     "@nuxtjs/eslint-config": "latest",
     "codecov": "latest",
     "eslint": "latest",
-    "husky": "latest",
+    "husky": "3.0.2",
     "jest": "latest",
-    "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "nuxt-edge": "2.9.0-26074089.edf5e66e",
+    "standard-version": "7.0.0"
   }
 }
