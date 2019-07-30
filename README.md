@@ -15,6 +15,7 @@
 
 - [📖 **Release Notes**](./CHANGELOG.md)
 - [🏀 **Online playground**](https://codesandbox.io/s/nuxtjs-vuetify-v0k7i)
+- [🛠 **Migration guide from Vuetify 1.5.x**](./MIGRATION_GUIDE.md)
 - [🏷 **Module for Vuetify 1.5.x**](https://github.com/nuxt-community/vuetify-module/tree/0.x)
 
 ## Setup
@@ -145,6 +146,10 @@ If you're using TypeScript, you'll need to add `@nuxtjs/vuetify` in your `compil
 ```
 
 You'll then be able to have autocompletion in Context (`ctx.$vuetify`) and Vue instances (`this.$vuetify`).
+
+## Migration Guide from Vuetify 1.5.x
+
+You'll find a step by step guide to upgrade from 1.5.x to 2.x [here](./MIGRATION_GUIDE.md)
 
 ## Development
 

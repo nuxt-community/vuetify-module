@@ -30,9 +30,9 @@
   "dependencies": {
     "deepmerge": "^4.0.0",
     "fibers": "^4.0.1",
-    "sass": "^1.22.7",
+    "sass": "^1.22.9",
     "sass-loader": "^7.1.0",
-    "vuetify": "^2.0.2",
+    "vuetify": "^2.0.3",
     "vuetify-loader": "^1.3.0"
   },
   "devDependencies": {
@@ -41,9 +41,9 @@
     "@nuxtjs/eslint-config": "latest",
     "codecov": "latest",
     "eslint": "latest",
-    "husky": "latest",
+    "husky": "3.0.2",
     "jest": "latest",
-    "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "nuxt-edge": "2.9.0-26074089.edf5e66e",
+    "standard-version": "7.0.0"
   }
 }
