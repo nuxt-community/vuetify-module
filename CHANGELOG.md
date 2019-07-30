@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/nuxt-community/vuetify-module/compare/v1.0.2...v1.1.0) (2019-07-30)
+
+
+### Features
+
+* defaultAssets.icons all icons providers support ([#85](https://github.com/nuxt-community/vuetify-module/issues/85)) ([d285b3b](https://github.com/nuxt-community/vuetify-module/commit/d285b3b))
+* vuetifyOptions through options file ([#86](https://github.com/nuxt-community/vuetify-module/issues/86)) ([78495a3](https://github.com/nuxt-community/vuetify-module/commit/78495a3))
+
 ### [1.0.2](https://github.com/nuxt-community/vuetify-module/compare/v1.0.1...v1.0.2) (2019-07-29)
 
 
