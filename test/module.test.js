@@ -49,6 +49,33 @@ describe('disable all default assets', () => {
   })
 })
 
+describe('set wrong value to defaultAssets.icons', () => {
+  let consoleWarnSpy
+  let nuxt
+
+  beforeAll(async () => {
+    consoleWarnSpy = jest.spyOn(console, 'warn')
+    nuxt = new Nuxt({
+      ...config,
+      vuetify: {
+        defaultAssets: {
+          icons: 'wrong'
+        }
+      }
+    })
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('should have warned user', () => {
+    expect(consoleWarnSpy).toHaveBeenCalledWith("[@nuxtjs/vuetify] Value `'wrong'` for `defaultAssets.icons` option is not supported (Supported values : `'mdi'`, `'md'`, `'fa'`, `'fa4'`, `false`)")
+  })
+})
+
 describe.skip('enable treeShake', () => {
   let nuxt
 
