@@ -156,11 +156,11 @@ export default {
 
 ### Hot reload of options in development
 
-Passing Vuetify options through module options means Nuxt will have to do a full rebuild of your application when changing options, which may not be ideal if you're tweaking a lot the options in development.
+In development mode, passing Vuetify options through module options in your configuration file means Nuxt will have to do a full rebuild of your application when changing them. That being said, it may not be ideal if you're tweaking a lot these options to find the ones that fits best for you.
 
 That's why we implemented a feature that will in a close future (Nuxt 2.9) used by more modules, that consist of being able to customize options through an external file compiled by Webpack instead of runtime.
 
-In the case of this module the options need to sit in `~/app/vuetify/options.js`
+In the case of this module, the options need to sit in `~/app/vuetify/options.js`
 
 ```js
 // app/vuetify/options.js
