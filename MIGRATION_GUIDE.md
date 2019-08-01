@@ -38,7 +38,7 @@ By default, the Nuxt module doesn't load [Material Icons](https://material.io/re
 Please see the [`defaultAssets`](https://github.com/nuxt-community/vuetify-module#defaultassets) option if you need more freedom.
 
 
-## V. Follow official Vuetify 2 Upgrade Guide
+## V. Follow official [Vuetify 2 Upgrade Guide](https://github.com/vuetifyjs/vuetify/releases/tag/v2.0.0#user-content-upgrade-guide)
 
 You can now follow the official Vuetify guide, and directly begin at the **Framework** section, skipping the **Boostrap** section whichs is handled by the Nuxt module.
 
