@@ -53,7 +53,7 @@ yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
 }
 ```
 
-## Options
+## Module Options
 
 ### `customVariables`
 
@@ -128,6 +128,61 @@ You can also set the whole `defaultAssets` option to `false` to prevent any auto
 
 Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
+
+## Vuetify Options
+
+Except the prior `customVariables`, `defaultAssets` and `treeShaking` options, all other options will be passed to Vuetify.
+
+
+It includes : 
+- [**Breakpoints**](https://vuetifyjs.com/en/customization/breakpoints)
+- [**Icons**](https://vuetifyjs.com/en/customization/icons)
+- [**Internationalization (i18n)**]()
+- [**RTL (bidirectionality)**](https://vuetifyjs.com/en/customization/rtl)
+- [**Theme**](https://vuetifyjs.com/en/customization/theme) 
+
+```js
+// nuxt.config.js
+export default {
+  vuetify: {
+    breakpoint: {},
+    icons: {},
+    lang: {},
+    rtl: true,
+    theme: {}
+  }
+}
+```
+
+### Hot reload of options in development
+
+Passing Vuetify options through module options means Nuxt will have to do a full rebuild of your application when changing options, which may not be ideal if you're tweaking a lot the options in development.
+
+That's why we implemented a feature that will in a close future (Nuxt 2.9) used by more modules, that consist of being able to customize options through an external file compiled by Webpack instead of runtime.
+
+In the case of this module the options need to sit in `~/app/vuetify/options.js`
+
+```js
+// app/vuetify/options.js
+export default {
+  theme: {
+    dark: true
+  }
+}
+```
+
+The `app` folder can be customized in `nuxt.config.js` this way :
+
+```js
+// nuxt.config.js
+export default {
+  dir: {
+    app: 'somewhere' // Nuxt will then look for 'somewhere/vuetify/options.js'
+  }
+}
+```
+
+> Note that if you don't think having to change a lot Vuetify options, keeping the options in your `nuxt.config.js` is totally fine. This feature is above all present to fill the need of fast hot reload in development when changing the Vuetify options.
 
 ## TypeScript
 
