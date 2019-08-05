@@ -138,6 +138,8 @@ export default {
 }
 ```
 
+> Note that you can also use [Directory Aliases](https://nuxtjs.org/guide/directory-structure#aliases) like `'~/path/to/option.js'`
+
 All vuetify options are supported, it includes : 
 - [**Breakpoints**](https://vuetifyjs.com/en/customization/breakpoints)
 - [**Icons**](https://vuetifyjs.com/en/customization/icons)
