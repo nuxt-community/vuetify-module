@@ -53,7 +53,7 @@ yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
 }
 ```
 
-## Module Options
+## Options
 
 ### `customVariables`
 
