@@ -121,6 +121,58 @@ Please refer to [Vuetify Icons documentation](https://vuetifyjs.com/en/customiza
 
 You can also set the whole `defaultAssets` option to `false` to prevent any automatic add of these two assets.
 
+### `optionsPath`
+
+- Type: `String`
+
+Location of the Vuetify options that will be passed to Vuetify.
+
+This file will be compiled by **webpack**, which means you'll benefit fast hot reload when changing these options, but also be able to use TypeScript without being forced to use TypeScript runtime.
+
+```js
+// nuxt.config.js
+export default {
+  vuetify: {
+    optionsPath: './vuetify.options.js'
+  }
+}
+```
+
+All vuetify options are supported, it includes : 
+- [**Breakpoints**](https://vuetifyjs.com/en/customization/breakpoints)
+- [**Icons**](https://vuetifyjs.com/en/customization/icons)
+- [**Internationalization (i18n)**]()
+- [**RTL (bidirectionality)**](https://vuetifyjs.com/en/customization/rtl)
+- [**Theme**](https://vuetifyjs.com/en/customization/theme) 
+
+
+```js
+// vuetify.options.js
+export default {
+  breakpoint: {},
+  icons: {},
+  lang: {},
+  rtl: true,
+  theme: {}
+}
+```
+
+> Notice that assing the Vuetify options directly to Module options is still supported, but it will trigger Nuxt entired rebuild if options are changed.
+
+If you need to access Nuxt context within the options file, you need to export a function instead :
+
+
+```js
+// vuetify.options.js
+export default function ({ app }) {
+  return {
+    lang: {
+      t: (key, ...params) => app.i18n.t(key, params)
+    }
+  }
+}
+```
+
 ### `treeShake`
 
 - Type: `Boolean`
@@ -128,61 +180,6 @@ You can also set the whole `defaultAssets` option to `false` to prevent any auto
 
 Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
-
-## Vuetify Options
-
-Except the prior `customVariables`, `defaultAssets` and `treeShaking` options, all other options will be passed to Vuetify.
-
-
-It includes : 
-- [**Breakpoints**](https://vuetifyjs.com/en/customization/breakpoints)
-- [**Icons**](https://vuetifyjs.com/en/customization/icons)
-- [**Internationalization (i18n)**]()
-- [**RTL (bidirectionality)**](https://vuetifyjs.com/en/customization/rtl)
-- [**Theme**](https://vuetifyjs.com/en/customization/theme) 
-
-```js
-// nuxt.config.js
-export default {
-  vuetify: {
-    breakpoint: {},
-    icons: {},
-    lang: {},
-    rtl: true,
-    theme: {}
-  }
-}
-```
-
-### Hot reload of options in development
-
-In development mode, passing Vuetify options through module options in your configuration file means Nuxt will have to do a full rebuild of your application when changing them. That being said, it may not be ideal if you're tweaking a lot these options to find the ones that fits best for you.
-
-That's why we implemented a feature that will in a close future (Nuxt 2.9) used by more modules, that consist of being able to customize options through an external file compiled by Webpack instead of runtime.
-
-In the case of this module, the options need to sit in `~/app/vuetify/options.js`
-
-```js
-// app/vuetify/options.js
-export default {
-  theme: {
-    dark: true
-  }
-}
-```
-
-The `app` folder can be customized in `nuxt.config.js` this way :
-
-```js
-// nuxt.config.js
-export default {
-  dir: {
-    app: 'somewhere' // Nuxt will then look for 'somewhere/vuetify/options.js'
-  }
-}
-```
-
-> Note that if you don't think having to change a lot Vuetify options, keeping the options in your `nuxt.config.js` is totally fine. This feature is above all present to fill the need of fast hot reload in development when changing the Vuetify options.
 
 ## TypeScript
 

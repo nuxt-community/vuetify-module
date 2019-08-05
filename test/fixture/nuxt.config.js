@@ -12,7 +12,8 @@ module.exports = {
   modules: [
     [
       require('../..'), {
-        customVariables: ['~/assets/variables.scss']
+        customVariables: ['~/assets/variables.scss'],
+        optionsPath: './vuetify.options.js'
       }
     ]
   ]
