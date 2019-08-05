@@ -157,7 +157,7 @@ export default {
 }
 ```
 
-> Notice that assing the Vuetify options directly to Module options is still supported, but it will trigger Nuxt entired rebuild if options are changed.
+> Notice that passing the Vuetify options directly to Module options is still supported, but it will trigger Nuxt entire rebuild if options are changed.
 
 If you need to access Nuxt context within the options file, you need to export a function instead :
 
