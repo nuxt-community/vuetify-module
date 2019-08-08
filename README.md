@@ -201,6 +201,16 @@ If you're using TypeScript, you'll need to add `@nuxtjs/vuetify` in your `compil
 
 You'll then be able to have autocompletion in Context (`ctx.$vuetify`) and Vue instances (`this.$vuetify`).
 
+## Offline applications
+
+If you're building an application that will need to work offline (more likely a [**PWA**](https://pwa.nuxtjs.org/)), you will need to bundle your fonts and icons in your app instead of using online resources.
+
+It means you must set [`defaultAssets`](#defaultassets) option to `false`.
+
+For fonts, you may leverage CSS [**@font-face**](https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp) rule with local path of your fonts.
+
+For icons, you can either use the same way than above, or leverage tree-shaken SVG libraries like [**Material Design Icons SVG**](https://github.com/Templarian/MaterialDesign-JS) or [**Font Awesome 5 SVG**](https://fontawesome.com/how-to-use/on-the-web/advanced/svg-javascript-core).
+
 ## Migration Guide from Vuetify 1.5.x
 
 You'll find a step by step guide to upgrade from 1.5.x to 2.x [here](./MIGRATION_GUIDE.md)
