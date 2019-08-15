@@ -1,5 +1,6 @@
 jest.setTimeout(60000)
 
+const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt-edge')
 
 const config = require('./fixture/nuxt.config')
@@ -50,11 +51,11 @@ describe('disable all default assets', () => {
 })
 
 describe('set wrong value to defaultAssets.icons', () => {
-  let consoleWarnSpy
+  let consolaWarnSpy
   let nuxt
 
   beforeAll(async () => {
-    consoleWarnSpy = jest.spyOn(console, 'warn')
+    consolaWarnSpy = jest.spyOn(consola, 'warn')
     nuxt = new Nuxt({
       ...config,
       vuetify: {
@@ -72,7 +73,7 @@ describe('set wrong value to defaultAssets.icons', () => {
   })
 
   test('should have warned user', () => {
-    expect(consoleWarnSpy).toHaveBeenCalledWith("[@nuxtjs/vuetify] Value `'wrong'` for `defaultAssets.icons` option is not supported (Supported values : `'mdi'`, `'md'`, `'fa'`, `'fa4'`, `false`)")
+    expect(consolaWarnSpy).toHaveBeenCalledWith("[@nuxtjs/vuetify] Value `'wrong'` for `defaultAssets.icons` option is not supported (Supported values : `'mdi'`, `'md'`, `'fa'`, `'fa4'`, `false`)")
   })
 })
 

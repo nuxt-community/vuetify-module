@@ -28,6 +28,7 @@
     "types/*.d.ts"
   ],
   "dependencies": {
+    "consola": "^2.10.1",
     "deepmerge": "^4.0.0",
     "fibers": "^4.0.1",
     "sass": "^1.22.9",
