@@ -100,3 +100,29 @@ describe.skip('enable treeShake', () => {
     expect(html).toContain('v-navigation-drawer--fixed')
   })
 })
+
+describe.skip('manually import', () => {
+  let nuxt
+
+  beforeAll(async () => {
+    nuxt = new Nuxt({
+      ...config,
+      vuetify: {
+        treeShake: {
+          components: ['VChip']
+        }
+      }
+    })
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+  })
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('render', async () => {
+    const { html } = await nuxt.renderRoute('/manual-import')
+    expect(html).toContain('v-chip__content')
+  })
+})
