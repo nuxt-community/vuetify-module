@@ -41,10 +41,10 @@
     "@commitlint/config-conventional": "latest",
     "@nuxtjs/eslint-config": "latest",
     "codecov": "latest",
-    "eslint": "latest",
+    "eslint": "6.2.1",
     "husky": "latest",
     "jest": "latest",
-    "nuxt-edge": "latest",
+    "nuxt-edge": "2.9.2-26105005.69ca84fb",
     "standard-version": "latest"
   }
 }
