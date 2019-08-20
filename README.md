@@ -26,11 +26,13 @@
 yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
 ```
 
-2. Add `@nuxtjs/vuetify` to the `devModules` section of `nuxt.config.js`
+2. Add `@nuxtjs/vuetify` to the `buildModules` section of `nuxt.config.js`
+
+:warning: If you are using Nuxt `< 2.9.0`, use `modules` instead.
 
 ```js
 {
-  devModules: [
+  buildModules: [
     // Simple usage
     '@nuxtjs/vuetify',
 
@@ -44,7 +46,7 @@ yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
 
 ```js
 {
-  devModules: [
+  buildModules: [
     '@nuxtjs/vuetify'
   ],
   vuetify: {
