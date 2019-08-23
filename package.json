@@ -33,7 +33,7 @@
     "fibers": "^4.0.1",
     "sass": "^1.22.10",
     "sass-loader": "^7.3.1",
-    "vuetify": "^2.0.9",
+    "vuetify": "^2.0.10",
     "vuetify-loader": "^1.3.0"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "eslint": "6.2.1",
     "husky": "latest",
     "jest": "latest",
-    "nuxt-edge": "2.9.2-26105770.3ca7eca7",
+    "nuxt-edge": "2.9.2-26108651.9ad02c40",
     "standard-version": "latest"
   }
 }
