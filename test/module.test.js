@@ -1,128 +1,107 @@
+import { Nuxt } from '@nuxt/core-edge'
+import { Builder } from '@nuxt/builder-edge'
+import { BundleBuilder } from '@nuxt/webpack-edge'
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+import consola from 'consola'
+
+import vuetifyModule from '..'
+
 jest.setTimeout(60000)
+jest.mock('vuetify-loader/lib/plugin')
 
-const consola = require('consola')
-const { Nuxt, Builder } = require('nuxt-edge')
+const buildWithVuetifyModule = async (config) => {
+  const nuxt = new Nuxt({
+    ...config
+  })
 
-const config = require('./fixture/nuxt.config')
-config.dev = false
+  try {
+    await nuxt.moduleContainer.addModule(vuetifyModule)
+    await new Builder(nuxt, BundleBuilder).build()
+  } catch (err) {
+
+  }
+
+  return nuxt
+}
 
 describe('module', () => {
   let nuxt
 
-  beforeAll(async () => {
-    nuxt = new Nuxt(config)
-    await nuxt.ready()
-    await new Builder(nuxt).build()
+  test('with default options', async () => {
+    nuxt = await buildWithVuetifyModule()
+
+    expect(nuxt.options.head.link).toHaveLength(2)
+    expect(nuxt.options.build.templates).toHaveLength(2)
+    expect(nuxt.options.build.templates.map(t => t.dst)).toEqual(['vuetify/options.js', 'vuetify/plugin.js'])
   })
 
-  afterAll(async () => {
-    await nuxt.close()
-  })
-
-  test('render', async () => {
-    const { html } = await nuxt.renderRoute('/')
-    expect(html).toContain('v-navigation-drawer--fixed')
-  })
-})
-
-describe('disable all default assets', () => {
-  let nuxt
-
-  beforeAll(async () => {
-    nuxt = new Nuxt({
-      ...config,
+  test('without defaultAssets', async () => {
+    nuxt = await buildWithVuetifyModule({
       vuetify: {
         defaultAssets: false
       }
     })
-    await nuxt.ready()
-    await new Builder(nuxt).build()
+
+    expect(nuxt.options.head.link).toHaveLength(0)
   })
 
-  afterAll(async () => {
-    await nuxt.close()
-  })
+  test('defaultAssets.icons wrong value', async () => {
+    const consolaWarnSpy = jest.spyOn(consola, 'warn')
 
-  test('render', async () => {
-    const { html } = await nuxt.renderRoute('/')
-    expect(html).not.toContain('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap')
-    expect(html).not.toContain('https://cdn.materialdesignicons.com/3.8.95/css/materialdesignicons.min.css')
-  })
-})
-
-describe('set wrong value to defaultAssets.icons', () => {
-  let consolaWarnSpy
-  let nuxt
-
-  beforeAll(async () => {
-    consolaWarnSpy = jest.spyOn(consola, 'warn')
-    nuxt = new Nuxt({
-      ...config,
+    nuxt = await buildWithVuetifyModule({
       vuetify: {
         defaultAssets: {
           icons: 'wrong'
         }
       }
     })
-    await nuxt.ready()
-    await new Builder(nuxt).build()
-  })
 
-  afterAll(async () => {
-    await nuxt.close()
-  })
-
-  test('should have warned user', () => {
     expect(consolaWarnSpy).toHaveBeenCalledWith("[@nuxtjs/vuetify] Value `'wrong'` for `defaultAssets.icons` option is not supported (Supported values : `'mdi'`, `'md'`, `'fa'`, `'fa4'`, `false`)")
   })
-})
 
-describe.skip('enable treeShake', () => {
-  let nuxt
+  test('with customVariables', async () => {
+    nuxt = await buildWithVuetifyModule({
+      build: {
+        loaders: {
+          sass: {
+            data: '$someVariable: #000000'
+          }
+        }
+      },
+      vuetify: {
+        customVariables: ['/path/to/variables.scss']
+      }
+    })
 
-  beforeAll(async () => {
-    nuxt = new Nuxt({
-      ...config,
+    expect(nuxt.options.build.loaders.sass.data).toContain("@import '/path/to/variables.scss'")
+  })
+
+  test('with treeShake', async () => {
+    nuxt = await buildWithVuetifyModule({
       vuetify: {
         treeShake: true
       }
     })
-    await nuxt.ready()
-    await new Builder(nuxt).build()
+
+    expect(nuxt.options.build.transpile).toContain('vuetify/lib')
+    expect(VuetifyLoaderPlugin).toHaveBeenCalledTimes(2) // client (1) + server (1) = (2)
   })
 
-  afterAll(async () => {
-    await nuxt.close()
+  test('render fixture', async () => {
+    const fixtureConfig = require('./fixture/nuxt.config')
+    fixtureConfig.dir = { app: '' } // Ensure Nuxt < 2.9 compatibility
+    // INFO: Can't use treeShake to check manual imports cause it throws the error "Renderer is loaded but not all resources are available"
+
+    nuxt = await buildWithVuetifyModule(fixtureConfig)
+
+    const { html: html1 } = await nuxt.renderRoute('/')
+    expect(html1).toContain('v-navigation-drawer--fixed')
+
+    const { html: html2 } = await nuxt.renderRoute('/dynamic-component')
+    expect(html2).toContain('v-chip__content')
   })
 
-  test('render', async () => {
-    const { html } = await nuxt.renderRoute('/')
-    expect(html).toContain('v-navigation-drawer--fixed')
-  })
-})
-
-describe.skip('manually import', () => {
-  let nuxt
-
-  beforeAll(async () => {
-    nuxt = new Nuxt({
-      ...config,
-      vuetify: {
-        treeShake: {
-          components: ['VChip']
-        }
-      }
-    })
-    await nuxt.ready()
-    await new Builder(nuxt).build()
-  })
-
-  afterAll(async () => {
-    await nuxt.close()
-  })
-
-  test('render', async () => {
-    const { html } = await nuxt.renderRoute('/manual-import')
-    expect(html).toContain('v-chip__content')
+  afterEach(async () => {
+    await nuxt.close
   })
 })
