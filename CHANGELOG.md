@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/nuxt-community/vuetify-module/compare/v1.4.0...v1.5.0) (2019-08-27)
+
+
+### Bug Fixes
+
+* fix missing comma for manual imports ([#132](https://github.com/nuxt-community/vuetify-module/issues/132)) ([069566b](https://github.com/nuxt-community/vuetify-module/commit/069566b)), closes [#130](https://github.com/nuxt-community/vuetify-module/issues/130) [/github.com/nuxt-community/vuetify-module/pull/132#discussion_r318289697](https://github.com/nuxt-community//github.com/nuxt-community/vuetify-module/pull/132/issues/discussion_r318289697)
+
+
+### Features
+
+* vuetify-loader options ([#134](https://github.com/nuxt-community/vuetify-module/issues/134)) ([22e82c5](https://github.com/nuxt-community/vuetify-module/commit/22e82c5))
+
 ## [1.4.0](https://github.com/nuxt-community/vuetify-module/compare/v1.3.3...v1.4.0) (2019-08-24)
 
 
