@@ -102,6 +102,6 @@ describe('module', () => {
   })
 
   afterEach(async () => {
-    await nuxt.close
+    await nuxt.close()
   })
 })
