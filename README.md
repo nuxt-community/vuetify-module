@@ -70,13 +70,17 @@ Usage example :
 
 ```scss
 // assets/variables.scss
-@import '~vuetify/src/styles/styles.sass';
 
-// The variables you want to modify
+// Change default font family (MUST be before `styles.sass` import)
+$body-font-family: 'Montserrat', sans-serif;
+
+// Other variables you want to modify
 $font-size-root: 14px;
-// For updating SASS lists
-$material-light: map-merge($material-light, ( cards: blue ));
 $btn-border-radius: 0px;
+
+// If you need to extend Vuetify SASS lists
+@import '~vuetify/src/styles/styles.sass';
+$material-light: map-merge($material-light, ( cards: blue ));
 ```
 
 ```js
@@ -87,6 +91,8 @@ export default {
   }
 }
 ```
+
+> The list of customizable variables can be found by looking at the files [here](https://github.com/vuetifyjs/vuetify/tree/master/packages/vuetify/src/styles/settings).
 
 ### `defaultAssets`
 
@@ -104,7 +110,7 @@ Automatically handle **Roboto** font & **Material Design Icons**.
 These assets are handled automatically by default to provide a zero-configuration which let you play directly with Vuetify.
 
 `defaultAssets.font` automatically adds the **Roboto** font stylesheet from official google fonts to load the font with `font-display: swap`.
-You can disable it if you plan to use different font or manually handle font loading.
+You can disable it if you plan to use different font or manually handle font loading. See [`customVariables`](#customVariables) section to override default `font-family: 'Roboto'`.
 
 `defaultAssets.icons` automatically adds the icons stylesheet from a CDN to load all the icons (**not optimized for production**).  
 Here are the accepted values for this option :
@@ -207,7 +213,7 @@ You'll then be able to have autocompletion in Context (`ctx.$vuetify`) and Vue i
 
 If you're building an application that will need to work offline (more likely a [**PWA**](https://pwa.nuxtjs.org/)), you will need to bundle your fonts and icons in your app instead of using online resources.
 
-It means you must set [`defaultAssets`](#defaultassets) option to `false`.
+It means you must set [`defaultAssets`](#defaultAssets) option to `false`.
 
 For fonts, you may leverage CSS [**@font-face**](https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp) rule with local path of your fonts.
 
