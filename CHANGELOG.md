@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/nuxt-community/vuetify-module/compare/v1.5.0...v1.6.0) (2019-08-29)
+
+
+### Bug Fixes
+
+* remove duplicate import of main.sass ([259e0ee](https://github.com/nuxt-community/vuetify-module/commit/259e0ee))
+
 ## [1.5.0](https://github.com/nuxt-community/vuetify-module/compare/v1.4.0...v1.5.0) (2019-08-27)
 
 
