@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file. See [standa
 ## [1.6.0](https://github.com/nuxt-community/vuetify-module/compare/v1.5.0...v1.6.0) (2019-08-29)
 
 
+### Notable changes
+
+* update dependency sass-loader to v8 ([#139](https://github.com/nuxt-community/vuetify-module/pull/139)) ([08bff6a](https://github.com/nuxt-community/vuetify-module/commit/08bff6a))
+
+
 ### Bug Fixes
 
 * remove duplicate import of main.sass ([259e0ee](https://github.com/nuxt-community/vuetify-module/commit/259e0ee))
