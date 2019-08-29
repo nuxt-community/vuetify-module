@@ -73,7 +73,7 @@ describe('module', () => {
       }
     })
 
-    expect(nuxt.options.build.loaders.sass.data).toContain("@import '/path/to/variables.scss'")
+    expect(nuxt.options.build.loaders.sass.prependData).toContain("@import '/path/to/variables.scss'")
   })
 
   test('with treeShake', async () => {
