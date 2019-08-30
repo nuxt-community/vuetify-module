@@ -64,7 +64,7 @@ describe('module', () => {
       build: {
         loaders: {
           sass: {
-            data: '$someVariable: #000000'
+            prependData: '$someVariable: #000000'
           }
         }
       },
