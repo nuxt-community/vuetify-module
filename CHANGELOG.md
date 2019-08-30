@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/nuxt-community/vuetify-module/compare/v1.6.0...v1.6.1) (2019-08-30)
+
+
+### Bug Fixes
+
+* fix indentedSyntax issue around scss files ([9aaad72](https://github.com/nuxt-community/vuetify-module/commit/9aaad72))
+
 ## [1.6.0](https://github.com/nuxt-community/vuetify-module/compare/v1.5.0...v1.6.0) (2019-08-29)
 
 
