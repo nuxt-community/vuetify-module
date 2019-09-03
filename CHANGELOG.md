@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/nuxt-community/vuetify-module/compare/v1.6.1...v1.6.2) (2019-09-03)
+
+
+### Bug Fixes
+
+* **types:** vuetify@2.0.12 types update ([#146](https://github.com/nuxt-community/vuetify-module/issues/146)) ([89c59a4](https://github.com/nuxt-community/vuetify-module/commit/89c59a4))
+
 ### [1.6.1](https://github.com/nuxt-community/vuetify-module/compare/v1.6.0...v1.6.1) (2019-08-30)
 
 
