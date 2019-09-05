@@ -1,5 +1,5 @@
 module.exports = {
   extends: [
-    '@nuxtjs'
+    '@nuxtjs/eslint-config-typescript'
   ]
 }

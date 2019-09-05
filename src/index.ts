@@ -1,8 +1,8 @@
-const path = require('path')
-const fs = require('fs')
-const consola = require('consola')
-const merge = require('deepmerge')
-const dartSass = require('sass')
+import path from 'path'
+import fs from 'fs'
+import consola from 'consola'
+import merge from 'deepmerge'
+import dartSass from 'sass'
 
 const defaults = {
   customVariables: [],
@@ -12,18 +12,18 @@ const defaults = {
   },
   optionsPath: undefined,
   treeShake: process.env.NODE_ENV === 'production'
-}
+} as any
 
 const cdn = {
   'mdi': 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
   'md': 'https://fonts.googleapis.com/css?family=Material+Icons',
   'fa': 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css',
   'fa4': 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css'
-}
+} as any
 
-module.exports = function (moduleOptions) {
+module.exports = function (this: any, moduleOptions: any) {
   this.nuxt.hook('build:before', () => {
-    const options = merge.all([
+    const options: any = merge.all([
       defaults,
       this.options.vuetify || {},
       moduleOptions
@@ -56,7 +56,7 @@ module.exports = function (moduleOptions) {
     // Custom variables
     const sassLoaderData = this.options.build.loaders.sass.prependData
     if (options.customVariables.length > 0 && typeof sassLoaderData !== 'function') {
-      const imports = options.customVariables.map(path => `@import '${path}'`).join('\n')
+      const imports = options.customVariables.map((path: any) => `@import '${path}'`).join('\n')
       this.options.build.loaders.sass.prependData = sassLoaderData ? sassLoaderData.concat('\n', imports) : imports
     }
 
@@ -85,7 +85,7 @@ module.exports = function (moduleOptions) {
           href: cdn[defaultIconPreset]
         })
       } else {
-        const wrapValue = val => typeof val === 'string' ? `\`'${val}'\`` : `\`${val}\``
+        const wrapValue = (val: any) => typeof val === 'string' ? `\`'${val}'\`` : `\`${val}\``
         const supportedValues = [...Object.keys(cdn), false].map(wrapValue)
         consola.warn(`[@nuxtjs/vuetify] Value ${wrapValue(defaultIconPreset)} for \`defaultAssets.icons\` option is not supported (Supported values : ${supportedValues.join(', ')})`)
       }
@@ -97,7 +97,7 @@ module.exports = function (moduleOptions) {
 
       this.options.build.transpile.push('vuetify/lib')
 
-      this.extendBuild((config) => {
+      this.extendBuild((config: any) => {
         config.plugins.push(new VuetifyLoaderPlugin(options.treeShake.loaderOptions || {}))
       })
     }
