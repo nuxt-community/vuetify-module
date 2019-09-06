@@ -12,7 +12,6 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "stripInternal": true,
-    "downlevelIteration": true,
     "noUnusedLocals": true
   },
   "include": ["src"]
