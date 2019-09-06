@@ -151,7 +151,7 @@ export default {
 All vuetify options are supported, it includes : 
 - [**Breakpoints**](https://vuetifyjs.com/en/customization/breakpoints)
 - [**Icons**](https://vuetifyjs.com/en/customization/icons)
-- [**Internationalization (i18n)**]()
+- [**Internationalization (i18n)**](https://vuetifyjs.com/en/customization/internationalization)
 - [**RTL (bidirectionality)**](https://vuetifyjs.com/en/customization/rtl)
 - [**Theme**](https://vuetifyjs.com/en/customization/theme) 
 
