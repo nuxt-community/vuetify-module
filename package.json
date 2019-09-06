@@ -41,7 +41,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@nuxt/typescript-build": "latest",
-    "@nuxt/typescript-runtime": "^0.1.5",
+    "@nuxt/typescript-runtime": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@types/jest": "latest",
     "@types/sass": "latest",
