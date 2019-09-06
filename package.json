@@ -11,17 +11,18 @@
       "name": "Kevin Marrec (@kevinmarrec)"
     }
   ],
-  "main": "lib/module.js",
-  "types": "types/index.d.ts",
+  "main": "dist/module.js",
+  "typings": "dist/index.d.ts",
   "repository": "nuxt-community/vuetify-module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "dev": "nuxt test/fixture",
-    "lint": "eslint --ext .js,.vue lib test",
+    "dev": "tsc && nuxt-ts test/fixture",
+    "build": "tsc",
+    "lint": "eslint --ext .ts,.js,.vue .",
     "test": "yarn lint && jest",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
+    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
     "lib",
@@ -39,12 +40,18 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "latest",
+    "@nuxt/typescript-build": "latest",
+    "@nuxt/typescript-runtime": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@types/jest": "latest",
+    "@types/sass": "latest",
     "codecov": "latest",
     "eslint": "latest",
     "husky": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "standard-version": "latest",
+    "ts-jest": "latest",
+    "typescript": "~3.5"
   }
 }
