@@ -5,7 +5,7 @@ import { Configuration } from '@nuxt/types'
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import consola from 'consola'
 
-import vuetifyModule from '../src'
+import vuetifyModule, { VuetifyLoaderOptions } from '../src'
 
 jest.setTimeout(60000)
 jest.mock('vuetify-loader/lib/plugin')
@@ -29,8 +29,16 @@ const buildWithVuetifyModule = async (config: Partial<Configuration> = {}) => {
 describe('module', () => {
   let nuxt
 
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
   test('with default options', async () => {
-    nuxt = await buildWithVuetifyModule()
+    nuxt = await buildWithVuetifyModule({
+      dir: {
+        app: ''
+      }
+    })
 
     expect(nuxt.options.head.link).toHaveLength(2)
     expect(nuxt.options.build.templates).toHaveLength(2)
@@ -64,6 +72,16 @@ describe('module', () => {
 
   test('with customVariables', async () => {
     nuxt = await buildWithVuetifyModule({
+      vuetify: {
+        customVariables: ['/path/to/variables.scss']
+      }
+    })
+
+    expect(nuxt.options.build.loaders.sass.prependData).toEqual("@import '/path/to/variables.scss'")
+  })
+
+  test('with customVariables (with existing prependData)', async () => {
+    nuxt = await buildWithVuetifyModule({
       build: {
         loaders: {
           sass: {
@@ -76,7 +94,17 @@ describe('module', () => {
       }
     })
 
-    expect(nuxt.options.build.loaders.sass.prependData).toContain("@import '/path/to/variables.scss'")
+    expect(nuxt.options.build.loaders.sass.prependData).toEqual("$someVariable: #000000\n@import '/path/to/variables.scss'")
+  })
+
+  test('with optionsPath', async () => {
+    nuxt = await buildWithVuetifyModule({
+      vuetify: {
+        optionsPath: 'test/fixture/vuetify.options.ts'
+      }
+    })
+
+    expect(nuxt.options.build.templates.map(t => t.dst)).toContain('vuetify/options.ts')
   })
 
   test('with treeShake', async () => {
@@ -88,5 +116,23 @@ describe('module', () => {
 
     expect(nuxt.options.build.transpile).toContain('vuetify/lib')
     expect(VuetifyLoaderPlugin).toHaveBeenCalledTimes(2) // client (1) + server (1) = (2)
+  })
+
+  test('with treeShake (and loaderOptions)', async () => {
+    const loaderOptions: VuetifyLoaderOptions = {
+      match () {
+        return []
+      }
+    }
+
+    nuxt = await buildWithVuetifyModule({
+      vuetify: {
+        treeShake: {
+          loaderOptions
+        }
+      }
+    })
+
+    expect(VuetifyLoaderPlugin).toHaveBeenNthCalledWith(2, loaderOptions)
   })
 })

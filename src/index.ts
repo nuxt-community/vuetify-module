@@ -26,6 +26,15 @@ const cdn = {
   'fa4': 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css'
 }
 
+export interface VuetifyLoaderOptions {
+  match?(originalTag: string, context: {
+    kebabTag: string,
+    camelTag: string,
+    path: string,
+    component: SFCDescriptor
+  }): Array<[string, string]>
+}
+
 export interface Options extends Partial<VuetifyPreset> {
   customVariables?: string[]
   defaultAssets?: {
@@ -34,14 +43,7 @@ export interface Options extends Partial<VuetifyPreset> {
   } | false
   optionsPath?: string
   treeShake?: boolean | {
-    loaderOptions?: {
-      match(originalTag: string, context: {
-        kebabTag: string,
-        camelTag: string,
-        path: string,
-        component: SFCDescriptor
-      }): Array<[string, string]>
-    }
+    loaderOptions?: VuetifyLoaderOptions
   }
 }
 
@@ -60,7 +62,7 @@ const vuetifyModule: Module = function (moduleOptions?: Options) {
     const options = merge.all([
       defaults,
       this.options.vuetify || {},
-      moduleOptions || {}
+      moduleOptions!
     ]) as Required<Options>
 
     // User can disable all default assets with `defaultAssets: false`
