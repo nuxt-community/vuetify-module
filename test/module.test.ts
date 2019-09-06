@@ -1,21 +1,23 @@
 import { Nuxt } from '@nuxt/core-edge'
 import { Builder } from '@nuxt/builder-edge'
 import { BundleBuilder } from '@nuxt/webpack-edge'
+import { Configuration } from '@nuxt/types'
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import consola from 'consola'
 
-import vuetifyModule from '..'
+import vuetifyModule from '../src'
 
 jest.setTimeout(60000)
 jest.mock('vuetify-loader/lib/plugin')
 
-const buildWithVuetifyModule = async (config) => {
+const buildWithVuetifyModule = async (config: Partial<Configuration> = {}) => {
   const nuxt = new Nuxt({
+    buildModules: [vuetifyModule],
     ...config
-  })
+  } as Configuration)
 
   try {
-    await nuxt.moduleContainer.addModule(vuetifyModule)
+    await nuxt.ready()
     await new Builder(nuxt, BundleBuilder).build()
   } catch (err) {
 
@@ -50,6 +52,7 @@ describe('module', () => {
 
     nuxt = await buildWithVuetifyModule({
       vuetify: {
+        // @ts-ignore
         defaultAssets: {
           icons: 'wrong'
         }
@@ -85,23 +88,5 @@ describe('module', () => {
 
     expect(nuxt.options.build.transpile).toContain('vuetify/lib')
     expect(VuetifyLoaderPlugin).toHaveBeenCalledTimes(2) // client (1) + server (1) = (2)
-  })
-
-  test('render fixture', async () => {
-    const fixtureConfig = require('./fixture/nuxt.config')
-    fixtureConfig.dir = { app: '' } // Ensure Nuxt < 2.9 compatibility
-    // INFO: Can't use treeShake to check manual imports cause it throws the error "Renderer is loaded but not all resources are available"
-
-    nuxt = await buildWithVuetifyModule(fixtureConfig)
-
-    const { html: html1 } = await nuxt.renderRoute('/')
-    expect(html1).toContain('v-navigation-drawer--fixed')
-
-    const { html: html2 } = await nuxt.renderRoute('/dynamic-component')
-    expect(html2).toContain('v-chip__content')
-  })
-
-  afterEach(async () => {
-    await nuxt.close()
   })
 })

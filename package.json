@@ -18,7 +18,7 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "tsc && nuxt test/fixture",
+    "dev": "tsc && nuxt-ts test/fixture",
     "build": "tsc",
     "lint": "eslint --ext .ts,.js,.vue .",
     "test": "yarn lint && jest",
@@ -40,14 +40,18 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config-typescript": "^0.1.2",
-    "@types/sass": "^1.16.0",
+    "@nuxt/typescript-build": "latest",
+    "@nuxt/typescript-runtime": "^0.1.5",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@types/jest": "latest",
+    "@types/sass": "latest",
     "codecov": "latest",
     "eslint": "latest",
     "husky": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
     "standard-version": "latest",
-    "typescript": "latest"
+    "ts-jest": "latest",
+    "typescript": "~3.5"
   }
 }

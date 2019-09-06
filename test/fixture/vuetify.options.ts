@@ -1,6 +1,7 @@
+import { VuetifyPreset } from 'vuetify/types/presets'
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+const options: VuetifyPreset = {
   theme: {
     dark: true,
     themes: {
@@ -10,3 +11,5 @@ export default {
     }
   }
 }
+
+export default options
