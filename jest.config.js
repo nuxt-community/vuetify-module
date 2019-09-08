@@ -14,8 +14,7 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.ts',
-    '!src/templates/**'
+    'src/**/*.ts'
   ],
   coverageThreshold: {
     global: {

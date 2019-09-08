@@ -34,14 +34,14 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   // Register options template
   this.addTemplate({
     fileName: `vuetify/options.${optionsPath && optionsPath.endsWith('ts') ? 'ts' : 'js'}`,
-    src: optionsPath || path.join(__dirname, 'templates/options.js'),
+    src: optionsPath || path.join(__dirname, '../templates', 'options.js'),
     options: vuetifyOptions
   })
 
   // Register plugin
   this.addPlugin({
     fileName: 'vuetify/plugin.js',
-    src: path.resolve(__dirname, 'templates/plugin.js'),
+    src: path.resolve(__dirname, '../templates', 'plugin.js'),
     options: {
       defaultIconPreset: options.defaultAssets && options.defaultAssets.icons,
       treeShake: options.treeShake

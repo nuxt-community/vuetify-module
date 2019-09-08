@@ -25,7 +25,8 @@
     "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
-    "dist"
+    "dist",
+    "templates"
   ],
   "dependencies": {
     "deepmerge": "^4.0.0",
