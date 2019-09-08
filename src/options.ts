@@ -4,6 +4,7 @@ import { SFCDescriptor } from 'vue-template-compiler'
 import { VuetifyPreset } from 'vuetify/types/presets'
 import { ModuleThis } from '@nuxt/types/config/module'
 
+import { FontOptions } from './font'
 import { IconPreset } from './icons'
 
 export interface VuetifyLoaderOptions {
@@ -18,7 +19,7 @@ export interface VuetifyLoaderOptions {
 export interface Options extends Partial<VuetifyPreset> {
   customVariables?: string[]
   defaultAssets?: {
-    font?: boolean,
+    font?: FontOptions,
     icons?: IconPreset | false
   } | false
   optionsPath?: string
@@ -27,11 +28,13 @@ export interface Options extends Partial<VuetifyPreset> {
   }
 }
 
-const defaults: Options = {
+export const defaults = {
   customVariables: [],
   defaultAssets: {
-    font: true,
-    icons: 'mdi'
+    font: {
+      family: 'Roboto'
+    },
+    icons: 'mdi' as IconPreset
   },
   optionsPath: undefined,
   treeShake: process.env.NODE_ENV === 'production'
@@ -41,7 +44,7 @@ export default function initOptions (this: ModuleThis, moduleOptions?: Options):
   const options = merge.all([
     defaults,
     this.options.vuetify || {},
-    moduleOptions!
+    moduleOptions || {}
   ]) as Required<Options>
 
   return options

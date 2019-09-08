@@ -7,15 +7,14 @@ export default function setupSass (this: ModuleThis, options: Pick<Options, 'cus
   // Cause since loader options validation, this will fail: https://github.com/nuxt/nuxt.js/tree/c8ee9a660809e856c28d8678c6a632bbdd6ed00f/packages/config/src/config/build.js#L50
   delete this.options.build!.loaders.sass.indentedSyntax
 
+  // Use Dart Sass
   this.options.build!.loaders.sass.implementation =
     this.options.build!.loaders.scss.implementation =
       dartSass
 
   // Custom variables
-  const sassLoaderData: string | Function = this.options.build!.loaders.sass.prependData
-
-  if (options.customVariables && options.customVariables.length > 0 && typeof sassLoaderData !== 'function') {
+  if (options.customVariables && options.customVariables.length > 0) {
     const imports = options.customVariables.map(path => `@import '${path}'`).join('\n')
-    this.options.build!.loaders.sass.prependData = sassLoaderData ? sassLoaderData.concat('\n', imports) : imports
+    this.options.build!.loaders.sass.prependData = [this.options.build!.loaders.sass.prependData, imports].join('\n')
   }
 }

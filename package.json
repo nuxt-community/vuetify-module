@@ -49,6 +49,7 @@
     "husky": "latest",
     "jest": "latest",
     "nuxt-edge": "latest",
+    "nuxt-webfontloader": "^1.1.0",
     "standard-version": "latest",
     "ts-jest": "latest",
     "typescript": "~3.5"
