@@ -34,7 +34,7 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   // Register options template
   this.addTemplate({
     fileName: `vuetify/options.${optionsPath && optionsPath.endsWith('ts') ? 'ts' : 'js'}`,
-    src: optionsPath || path.join(__dirname, '../templates', 'options.js'),
+    src: optionsPath || path.resolve(__dirname, '../templates', 'options.js'),
     options: vuetifyOptions
   })
 
