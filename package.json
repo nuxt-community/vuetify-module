@@ -11,7 +11,7 @@
       "name": "Kevin Marrec (@kevinmarrec)"
     }
   ],
-  "main": "dist/module.js",
+  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "nuxt-community/vuetify-module",
   "publishConfig": {
@@ -25,8 +25,7 @@
     "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
-    "lib",
-    "types/*.d.ts"
+    "dist"
   ],
   "dependencies": {
     "deepmerge": "^4.0.0",

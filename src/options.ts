@@ -18,7 +18,7 @@ export interface VuetifyLoaderOptions {
 export interface Options extends Partial<VuetifyPreset> {
   customVariables?: string[]
   defaultAssets?: {
-    font?: string | false,
+    font?: boolean,
     icons?: IconPreset | false
   } | false
   optionsPath?: string
@@ -30,7 +30,7 @@ export interface Options extends Partial<VuetifyPreset> {
 const defaults: Options = {
   customVariables: [],
   defaultAssets: {
-    font: 'Roboto',
+    font: true,
     icons: 'mdi'
   },
   optionsPath: undefined,
