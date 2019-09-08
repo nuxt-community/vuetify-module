@@ -3,7 +3,6 @@ import { Builder } from '@nuxt/builder-edge'
 import { BundleBuilder } from '@nuxt/webpack-edge'
 import { Configuration } from '@nuxt/types'
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
-import consola from 'consola'
 
 import vuetifyModule, { VuetifyLoaderOptions } from '../src'
 
@@ -53,21 +52,6 @@ describe('module', () => {
     })
 
     expect(nuxt.options.head.link).toHaveLength(0)
-  })
-
-  test('defaultAssets.icons wrong value', async () => {
-    const consolaWarnSpy = jest.spyOn(consola, 'warn')
-
-    nuxt = await buildWithVuetifyModule({
-      vuetify: {
-        // @ts-ignore
-        defaultAssets: {
-          icons: 'wrong'
-        }
-      }
-    })
-
-    expect(consolaWarnSpy).toHaveBeenCalledWith("[@nuxtjs/vuetify] Value `'wrong'` for `defaultAssets.icons` option is not supported (Supported values : `'mdi'`, `'md'`, `'fa'`, `'fa4'`, `false`)")
   })
 
   test('with customVariables', async () => {
