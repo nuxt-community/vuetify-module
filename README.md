@@ -71,11 +71,7 @@ Usage example :
 ```scss
 // assets/variables.scss
 
-// Change default font family (MUST be before `styles.sass` import)
-$body-font-family: 'Montserrat', sans-serif;
-
-// Other variables you want to modify
-$font-size-root: 14px;
+// Variables you want to modify
 $btn-border-radius: 0px;
 
 // If you need to extend Vuetify SASS lists
@@ -100,17 +96,23 @@ export default {
 - Default: 
 ```js
 {
-  font: true,
+  font: {
+    family: 'Roboto' 
+  },
   icons: 'mdi'
 }
 ```
 
-Automatically handle **Roboto** font & **Material Design Icons**.
+By default, automatically handle **Roboto** font & **Material Design Icons**.
 
 These assets are handled automatically by default to provide a zero-configuration which let you play directly with Vuetify.
 
-`defaultAssets.font` automatically adds the **Roboto** font stylesheet from official google fonts to load the font with `font-display: swap`.
-You can disable it if you plan to use different font or manually handle font loading. See [`customVariables`](#customVariables) section to override default `font-family: 'Roboto'`.
+`defaultAssets.font.family` automatically adds the specified font (default **Roboto**) stylesheet from official google fonts to load the font with `font-display: swap`.
+If you have [nuxt-webfontloader](https://github.com/Developmint/nuxt-webfontloader) in your `modules`, it will use it automatically.
+
+`defaultAssets.font.size` allows you to specify the root font size in your application.
+
+⚠ If you choose a custom font family (i.e. not **Roboto**), it will automatically override Vuetify SASS variables (`$body-font-family` & `font-size-root`), but you will need [tree-shaking](#treeShake) to be enabled to have them correctly applied.
 
 `defaultAssets.icons` automatically adds the icons stylesheet from a CDN to load all the icons (**not optimized for production**).  
 Here are the accepted values for this option :
