@@ -87,6 +87,7 @@ describe('setupSass', () => {
 
     expect(nuxt.options.build.loaders.sass.indentedSyntax).toBeUndefined()
     expect(nuxt.options.build.loaders.sass.implementation).toEqual(dartSass)
+    expect(nuxt.options.build.loaders.sass.sassOptions.indentedSyntax).toBe(true)
     expect(nuxt.options.build.loaders.scss.implementation).toEqual(dartSass)
   })
 

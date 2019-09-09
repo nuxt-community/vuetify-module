@@ -12,6 +12,10 @@ export default function setupSass (this: ModuleThis, options: Pick<Options, 'cus
     this.options.build!.loaders.scss.implementation =
       dartSass
 
+  // Ensure it uses indented syntax for Sass files
+  this.options.build!.loaders.sass.sassOptions = this.options.build!.loaders.sass.sassOptions || {}
+  this.options.build!.loaders.sass.sassOptions.indentedSyntax = true
+
   // Custom variables
   if (options.customVariables && options.customVariables.length > 0) {
     const imports = options.customVariables.map(path => `@import '${path}'`).join('\n')
