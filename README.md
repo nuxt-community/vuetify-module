@@ -112,7 +112,7 @@ If you have [nuxt-webfontloader](https://github.com/Developmint/nuxt-webfontload
 
 `defaultAssets.font.size` allows you to specify the root font size in your application.
 
-⚠ If you choose a custom font family (i.e. not **Roboto**), it will automatically override Vuetify SASS variables (`$body-font-family` & `font-size-root`), but you will need [tree-shaking](#treeShake) to be enabled to have them correctly applied.
+:warning: If you choose a custom font family (i.e. not **Roboto**), it will automatically override Vuetify SASS variables (`$body-font-family` & `font-size-root`), but you will need [tree-shaking](#treeShake) to be enabled to have them correctly applied.
 
 `defaultAssets.icons` automatically adds the icons stylesheet from a CDN to load all the icons (**not optimized for production**).  
 Here are the accepted values for this option :
