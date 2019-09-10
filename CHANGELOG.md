@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/nuxt-community/vuetify-module/compare/v1.8.2...v1.8.3) (2019-09-10)
+
+
+### Bug Fixes
+
+* fix treeshake types for manual imports ([0b8e274](https://github.com/nuxt-community/vuetify-module/commit/0b8e274)), closes [#160](https://github.com/nuxt-community/vuetify-module/issues/160)
+
 ### [1.8.2](https://github.com/nuxt-community/vuetify-module/compare/v1.8.1...v1.8.2) (2019-09-09)
 
 ### [1.8.1](https://github.com/nuxt-community/vuetify-module/compare/v1.8.0...v1.8.1) (2019-09-09)
