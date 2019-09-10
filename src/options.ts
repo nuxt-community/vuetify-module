@@ -7,6 +7,13 @@ import { ModuleThis } from '@nuxt/types/config/module'
 import { FontOptions } from './font'
 import { IconPreset } from './icons'
 
+export interface TreeShakeOptions {
+  components?: string[]
+  directives?: string[]
+  loaderOptions?: VuetifyLoaderOptions
+  transitions?: string[]
+}
+
 export interface VuetifyLoaderOptions {
   match?(originalTag: string, context: {
     kebabTag: string,
@@ -23,9 +30,7 @@ export interface Options extends Partial<VuetifyPreset> {
     icons?: IconPreset | false
   } | false
   optionsPath?: string
-  treeShake?: boolean | {
-    loaderOptions?: VuetifyLoaderOptions
-  }
+  treeShake?: boolean | TreeShakeOptions
 }
 
 export const defaults = {

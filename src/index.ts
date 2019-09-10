@@ -1,7 +1,7 @@
 import { Module } from '@nuxt/types'
 import { Framework } from 'vuetify'
 
-import initOptions, { Options, VuetifyLoaderOptions } from './options'
+import initOptions, { Options, TreeShakeOptions, VuetifyLoaderOptions } from './options'
 import setupBuild from './build'
 import setupFont from './font'
 import setupIcons from './icons'
@@ -33,6 +33,7 @@ const vuetifyModule: Module = function (moduleOptions?: Options) {
 
 export {
   Options,
+  TreeShakeOptions,
   VuetifyLoaderOptions
 }
 
