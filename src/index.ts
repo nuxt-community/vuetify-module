@@ -17,7 +17,7 @@ declare module '@nuxt/types' {
   }
 }
 
-const vuetifyModule: Module = function (moduleOptions?: Options) {
+const vuetifyModule: Module<Options> = function (moduleOptions) {
   this.nuxt.hook('build:before', () => {
     const options = initOptions.call(this, moduleOptions)
 
