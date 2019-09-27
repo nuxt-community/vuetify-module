@@ -83,6 +83,7 @@ describe('setupIcons', () => {
 
 describe('setupSass', () => {
   test('default', () => {
+    delete nuxt.options.build.loaders.sass.sassOptions
     setupSass(defaultOptions)
 
     expect(nuxt.options.build.loaders.sass.indentedSyntax).toBeUndefined()
