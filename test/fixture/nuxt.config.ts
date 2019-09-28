@@ -12,7 +12,7 @@ const config: Partial<Configuration> = {
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    optionsPath: './vuetify.options.ts'
+    frameworkOptions: './vuetify.options.ts'
   }
 }
 
