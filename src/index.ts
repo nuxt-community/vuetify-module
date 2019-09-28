@@ -26,7 +26,7 @@ const vuetifyModule: Module<Options> = function (moduleOptions) {
       options.defaultAssets.icons && setupIcons.call(this, options.defaultAssets.icons)
     }
 
-    setupSass.call(this, options)
+    setupSass.call(this, options.customVariables)
     setupBuild.call(this, options)
   })
 }

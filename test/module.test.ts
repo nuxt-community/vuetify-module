@@ -24,7 +24,7 @@ const setupBuild = (options?: Options) => {
 }
 const setupFont = (options?: FontOptions) => _setupFont.call(nuxt.moduleContainer, options)
 const setupIcons = (preset?: IconPreset) => _setupIcons.call(nuxt.moduleContainer, preset)
-const setupSass = (options?: Options) => _setupSass.call(nuxt.moduleContainer, options)
+const setupSass = (customVariables?: Options['customVariables']) => _setupSass.call(nuxt.moduleContainer, customVariables)
 
 beforeEach(async () => {
   nuxt = new Nuxt()
@@ -64,8 +64,10 @@ describe('setupFont', () => {
       }
     })
 
-    expect(nuxt.options.build.loaders.sass.prependData).toContain("$body-font-family: 'Montserrat', sans-serif")
-    expect(nuxt.options.build.loaders.sass.prependData).toContain('$font-size-root: 20px')
+    const { prependData } = nuxt.options.build.loaders.sass
+
+    expect(prependData).toContain("$body-font-family: 'Montserrat', sans-serif")
+    expect(prependData).toContain('$font-size-root: 20px')
   })
 })
 
@@ -84,18 +86,20 @@ describe('setupIcons', () => {
 describe('setupSass', () => {
   test('default', () => {
     delete nuxt.options.build.loaders.sass.sassOptions
-    setupSass(defaultOptions)
 
-    expect(nuxt.options.build.loaders.sass.indentedSyntax).toBeUndefined()
-    expect(nuxt.options.build.loaders.sass.implementation).toEqual(dartSass)
-    expect(nuxt.options.build.loaders.sass.sassOptions.indentedSyntax).toBe(true)
-    expect(nuxt.options.build.loaders.scss.implementation).toEqual(dartSass)
+    setupSass()
+
+    const { sass, scss } = nuxt.options.build.loaders
+
+    expect(sass.implementation).toEqual(dartSass)
+    expect(scss.implementation).toEqual(dartSass)
+
+    expect(sass.indentedSyntax).toBeUndefined()
+    expect(sass.sassOptions.indentedSyntax).toBe(true)
   })
 
   test('customVariables', () => {
-    setupSass({
-      customVariables: ['/path/to/variables.scss']
-    })
+    setupSass(['/path/to/variables.scss'])
 
     expect(nuxt.options.build.loaders.sass.prependData).toContain("@import '/path/to/variables.scss'")
   })
