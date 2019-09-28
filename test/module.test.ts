@@ -102,6 +102,7 @@ describe('setupSass', () => {
     setupSass(['/path/to/variables.scss'])
 
     expect(nuxt.options.build.loaders.sass.prependData).toContain("@import '/path/to/variables.scss'")
+    expect(nuxt.options.build.loaders.scss.prependData).toContain("@import '/path/to/variables.scss';")
   })
 })
 

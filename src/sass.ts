@@ -18,7 +18,9 @@ export default function setupSass (this: ModuleThis, customVariables: Options['c
 
   // Custom variables
   if (customVariables && customVariables.length > 0) {
-    const imports = customVariables.map(path => `@import '${path}'`).join('\n')
-    sass.prependData = [sass.prependData, imports].join('\n')
+    const sassImports = customVariables.map(path => `@import '${path}'`).join('\n')
+    sass.prependData = [sass.prependData, sassImports].join('\n')
+    const scssImports = customVariables.map(path => `@import '${path}';`).join('\n')
+    scss.prependData = [scss.prependData, scssImports].join('\n')
   }
 }
