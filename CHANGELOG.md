@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/nuxt-community/vuetify-module/compare/v1.8.6...v1.9.0) (2019-10-02)
+
+### Notes
+
+* **Vuetify** has been bumped to **2.1 (Vanguard)**, check their [**Release notes**](https://togithub.com/vuetifyjs/vuetify/releases/v2.1.0) ! We highly recommend you to check the new [Skeleton Loader](https://vuetifyjs.com/en/components/skeleton-loaders) component 🤩
+
+* **`dart-sass`** has been bumped to **1.23.0**, check their [**Release notes**](https://github.com/sass/dart-sass/releases/1.23.0) ! It includes the new launch of the new **Sass** module system 🤩
+ 
 ### [1.8.6](https://github.com/nuxt-community/vuetify-module/compare/v1.8.5...v1.8.6) (2019-09-28)
 
 
