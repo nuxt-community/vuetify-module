@@ -1,48 +1,37 @@
 import merge from 'deepmerge'
 
-import { SFCDescriptor } from 'vue-template-compiler'
 import { VuetifyPreset } from 'vuetify/types/presets'
 import { ModuleThis } from '@nuxt/types/config/module'
 
+import { VuetifyLoaderOptions } from './automaticImports'
 import { FontOptions } from './font'
 import { IconPreset } from './icons'
 
-export interface TreeShakeOptions {
+export interface GlobalImports {
   components?: string[]
   directives?: string[]
-  loaderOptions?: VuetifyLoaderOptions
   transitions?: string[]
 }
 
-export interface VuetifyLoaderOptions {
-  match?(originalTag: string, context: {
-    kebabTag: string,
-    camelTag: string,
-    path: string,
-    component: SFCDescriptor
-  }): Array<[string, string]>
-}
-
-export interface Options extends Partial<VuetifyPreset> {
+export interface Options {
+  automaticImports?: boolean | VuetifyLoaderOptions
   customVariables?: string[]
   defaultAssets?: {
     font?: FontOptions,
     icons?: IconPreset | false
   } | false
-  optionsPath?: string
-  treeShake?: boolean | TreeShakeOptions
+  frameworkOptions?: string | Partial<VuetifyPreset>
+  globalImports?: GlobalImports
 }
 
 export const defaults = {
-  customVariables: [],
+  automaticImports: true,
   defaultAssets: {
     font: {
       family: 'Roboto'
     },
     icons: 'mdi' as IconPreset
-  },
-  optionsPath: undefined,
-  treeShake: process.env.NODE_ENV === 'production'
+  }
 }
 
 export default function initOptions (this: ModuleThis, moduleOptions?: Options): Required<Options> {
