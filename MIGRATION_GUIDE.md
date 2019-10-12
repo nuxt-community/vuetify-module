@@ -29,7 +29,7 @@ yarn add --dev @nuxtjs/vuetify # npm install --save-dev @nuxtjs/vuetify
 
 - `css` has been removed, it will includes full Vuetify css only in development mode when `treeShake` is falsy.
 
-- `treeShake` works the same, its default value is `false` in development (`nuxt dev`) and `false` in production (`nuxt build` & `nuxt generate`).
+- `treeShake` works the same, its default value is `false` in development (`nuxt dev`) and `true` in production (`nuxt build` & `nuxt generate`).
 
 ## IV. Migrating font & icons
 
