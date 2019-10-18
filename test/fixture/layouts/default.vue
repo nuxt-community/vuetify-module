@@ -54,7 +54,7 @@
         <span class="title">Youtube</span>
       </v-toolbar-title>
       <v-spacer />
-      <v-layout row align-center style="max-width: 650px">
+      <v-row style="max-width: 650px">
         <v-text-field
           placeholder="Search..."
           single-line
@@ -62,7 +62,7 @@
           color="white"
           hide-details
         />
-      </v-layout>
+      </v-row>
     </v-app-bar>
     <v-content>
       <Nuxt />
