@@ -19,7 +19,8 @@
   },
   "scripts": {
     "dev": "tsc && nuxt-ts test/fixture",
-    "build": "tsc",
+    "build": "yarn clean && tsc",
+    "clean": "rimraf dist",
     "lint": "eslint --ext .ts,.js,.vue .",
     "test": "yarn lint && jest",
     "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
@@ -52,6 +53,7 @@
     "jest": "latest",
     "nuxt-edge": "latest",
     "nuxt-webfontloader": "^1.1.0",
+    "rimraf": "^3.0.0",
     "standard-version": "latest",
     "ts-jest": "latest",
     "typescript": "~3.6"
