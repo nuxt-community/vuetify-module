@@ -1,7 +1,7 @@
 <template>
   <v-container fill-height>
-    <v-layout justify-center align-center>
-      <v-flex shrink>
+    <v-row>
+      <v-col class="text-center">
         <v-tooltip right>
           <template #activator="{ on }">
             <v-btn
@@ -18,7 +18,7 @@
           </template>
           <span>Source</span>
         </v-tooltip>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
