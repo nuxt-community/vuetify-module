@@ -26,5 +26,6 @@ export default function setupSass (this: ModuleThis, customVariables: Options['c
   // Custom variables
   if (customVariables && customVariables.length > 0) {
     prependData.call(this, ...customVariables.map(path => `@import '${path}'`))
+    prependData.call(this, "@import '~vuetify/src/styles/styles.sass'")
   }
 }
