@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.0](https://github.com/nuxt-community/vuetify-module/compare/v1.9.0...v2.0.0-alpha.0) (2019-11-04)
+
+
+### Bug Fixes
+
+* import vuetify styles if custom variables ([25a0847](https://github.com/nuxt-community/vuetify-module/commit/25a084747c5c21388cbf413e66594e69dd80d169))
+* **deps:** fibers is optional dependency ([#179](https://github.com/nuxt-community/vuetify-module/issues/179)) ([33962d4](https://github.com/nuxt-community/vuetify-module/commit/33962d4be6439a24476f30844751205d5385b960))
+* fixture module configuration ([45a1a7e](https://github.com/nuxt-community/vuetify-module/commit/45a1a7e087062bd9e91909ccc21527f4f0b6b49a))
+
 ## [1.9.0](https://github.com/nuxt-community/vuetify-module/compare/v1.8.6...v1.9.0) (2019-10-02)
 
 ### Notes
