@@ -11,7 +11,12 @@ const config: Partial<Configuration> = {
   buildModules: [typescriptModule, vuetifyModule],
 
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    defaultAssets: {
+      font: {
+        family: 'Montserrat',
+        size: 20
+      }
+    },
     frameworkOptions: './vuetify.options.ts'
   }
 }
