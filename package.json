@@ -31,10 +31,10 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "fibers": "^4.0.2",
-    "sass": "^1.23.3",
+    "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "vuetify": "^2.1.9",
-    "vuetify-loader": "^1.3.0"
+    "vuetify": "^2.1.13",
+    "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
