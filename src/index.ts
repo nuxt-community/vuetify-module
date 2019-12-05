@@ -2,7 +2,7 @@ import { Module } from '@nuxt/types'
 import { Framework } from 'vuetify'
 
 import initOptions, { Options } from './options'
-import setupAutomaticImports, { VuetifyLoaderOptions } from './automaticImports'
+import setupLoader, { VuetifyLoaderOptions } from './loader'
 import setupFont from './font'
 import setupIcons from './icons'
 import setupPlugin from './plugin'
@@ -29,7 +29,7 @@ const vuetifyModule: Module<Options> = function (moduleOptions) {
       options.defaultAssets.icons && setupIcons.call(this, options.defaultAssets.icons)
     }
 
-    options.automaticImports && setupAutomaticImports.call(this, options.automaticImports)
+    options.loader && setupLoader.call(this, options.loader)
 
     setupPlugin.call(this, options)
   })

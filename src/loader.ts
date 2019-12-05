@@ -11,9 +11,15 @@ export interface VuetifyLoaderOptions {
     path: string,
     component: SFCDescriptor
   }): Array<[string, string]>
+  progressiveImages?: boolean | {
+    graphicsMagick?: boolean
+    resourceQuery?: RegExp
+    sharp?: boolean
+    size?: number
+  }
 }
 
-export default function setupAutomaticImports (this: ModuleThis, options: Options['automaticImports']) {
+export default function setupLoader (this: ModuleThis, options: Options['loader']) {
   const VuetifyLoaderPlugin = this.nuxt.resolver.requireModule('vuetify-loader/lib/plugin')
 
   this.extendBuild((config) => {

@@ -3,7 +3,7 @@ import merge from 'deepmerge'
 import { VuetifyPreset } from 'vuetify/types/presets'
 import { ModuleThis } from '@nuxt/types/config/module'
 
-import { VuetifyLoaderOptions } from './automaticImports'
+import { VuetifyLoaderOptions } from './loader'
 import { FontOptions } from './font'
 import { IconPreset } from './icons'
 
@@ -14,7 +14,6 @@ export interface GlobalImports {
 }
 
 export interface Options {
-  automaticImports?: boolean | VuetifyLoaderOptions
   customVariables?: string[]
   defaultAssets?: {
     font?: FontOptions,
@@ -22,16 +21,17 @@ export interface Options {
   } | false
   frameworkOptions?: string | Partial<VuetifyPreset>
   globalImports?: GlobalImports
+  loader?: boolean | VuetifyLoaderOptions
 }
 
 export const defaults = {
-  automaticImports: true,
   defaultAssets: {
     font: {
       family: 'Roboto'
     },
     icons: 'mdi' as IconPreset
-  }
+  },
+  loader: true
 }
 
 export default function initOptions (this: ModuleThis, moduleOptions?: Options): Required<Options> {

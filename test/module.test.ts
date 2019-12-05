@@ -4,7 +4,7 @@ import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
 import _vuetifyModule from '../src'
 import _initOptions, { defaults as defaultOptions, Options } from '../src/options'
-import _setupAutomaticImports, { VuetifyLoaderOptions } from '../src/automaticImports'
+import _setupLoader, { VuetifyLoaderOptions } from '../src/loader'
 import _setupFont, { FontOptions } from '../src/font'
 import _setupIcons, { IconPreset } from '../src/icons'
 import _setupPlugin from '../src/plugin'
@@ -19,8 +19,8 @@ const vuetifyModule = async (options?: Options) => {
   await nuxt.callHook('build:before')
 }
 const initOptions = (options?: Options): Required<Options> => _initOptions.call(nuxt.moduleContainer, options)
-const setupAutomaticImports = (options?: Options['automaticImports']) => {
-  _setupAutomaticImports.call(nuxt.moduleContainer, options)
+const setupLoader = (options?: Options['loader']) => {
+  _setupLoader.call(nuxt.moduleContainer, options)
   nuxt.options.build.extend && nuxt.options.build.extend({ plugins: [] })
 }
 const setupFont = (options?: FontOptions) => _setupFont.call(nuxt.moduleContainer, options)
@@ -113,9 +113,9 @@ describe('setupIcons', () => {
   })
 })
 
-describe('setupAutomaticImports', () => {
+describe('setupLoader', () => {
   test('default', () => {
-    setupAutomaticImports(true)
+    setupLoader(true)
 
     expect(VuetifyLoaderPlugin).toHaveBeenCalled()
   })
@@ -124,10 +124,13 @@ describe('setupAutomaticImports', () => {
     const options: VuetifyLoaderOptions = {
       match () {
         return []
+      },
+      progressiveImages: {
+        resourceQuery: /lazy\?vuetify-preload/
       }
     }
 
-    setupAutomaticImports(options)
+    setupLoader(options)
 
     expect(VuetifyLoaderPlugin).toHaveBeenCalledWith(options)
   })
