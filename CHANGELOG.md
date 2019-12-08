@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.1](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.0...v2.0.0-alpha.1) (2019-12-08)
+
+
+### Features
+
+* progressive images ([e520284](https://github.com/nuxt-community/vuetify-module/commit/e5202844967431b2a0f769507cf4b489d17e9edc)), closes [#167](https://github.com/nuxt-community/vuetify-module/issues/167)
+
 ## [2.0.0-alpha.0](https://github.com/nuxt-community/vuetify-module/compare/v1.9.0...v2.0.0-alpha.0) (2019-11-04)
 
 
