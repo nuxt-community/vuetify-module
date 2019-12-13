@@ -12,7 +12,7 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   if (options.treeShake) {
     const VuetifyLoaderPlugin = this.nuxt.resolver.requireModule('vuetify-loader/lib/plugin')
 
-    this.options.build!.transpile!.push('vuetify/lib')
+    this.options.build!.transpile!.push('vuetify')
 
     this.extendBuild((config) => {
       config.plugins!.push(new VuetifyLoaderPlugin(typeof options.treeShake === 'object' ? options.treeShake.loaderOptions : {}))
