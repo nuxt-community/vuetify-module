@@ -130,7 +130,7 @@ describe('setupBuild', () => {
       treeShake: true
     })
 
-    expect(nuxt.options.build.transpile).toContain('vuetify/lib')
+    expect(nuxt.options.build.transpile).toContain('vuetify')
     expect(VuetifyLoaderPlugin).toHaveBeenCalled()
   })
 
@@ -147,7 +147,7 @@ describe('setupBuild', () => {
       }
     })
 
-    expect(nuxt.options.build.transpile).toContain('vuetify/lib')
+    expect(nuxt.options.build.transpile).toContain('vuetify')
     expect(VuetifyLoaderPlugin).toHaveBeenCalledWith(loaderOptions)
   })
 })
