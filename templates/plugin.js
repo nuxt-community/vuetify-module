@@ -1,16 +1,16 @@
 import Vue from 'vue'
-import Vuetify from '<%= options.treeShake ? 'vuetify/lib' : 'vuetify' %>'
+import Vuetify from '<%= options.globalImports ? 'vuetify/lib' : 'vuetify' %>'
 <%
 const libImports = [
   { key: 'components', location: 'vuetify/lib'},
   { key: 'transitions', location: 'vuetify/lib'},
   { key: 'directives', location: 'vuetify/lib/directives'}
 ]
-if (options.treeShake) {
+if (options.globalImports) {
   for (const lib of libImports) {
-    if (options.treeShake[lib.key] && options.treeShake[lib.key].length > 0) {
+    if (options.globalImports[lib.key] && options.globalImports[lib.key].length > 0) {
 %>
-import { <%= options.treeShake[lib.key].join(', ') %> } from '<%= lib.location %>'
+import { <%= options.globalImports[lib.key].join(', ') %> } from '<%= lib.location %>'
   <%
     }
   }
@@ -20,9 +20,9 @@ import { <%= options.treeShake[lib.key].join(', ') %> } from '<%= lib.location %
 import options from './options'
 
 Vue.use(Vuetify, {
-<% if (options.treeShake) { %>
-<%= libImports.filter(lib => options.treeShake[lib.key] && options.treeShake[lib.key].length > 0)
-      .map(lib => `  ${lib.key}: { ${options.treeShake[lib.key].join(', ')} }`)
+<% if (options.globalImports) { %>
+<%= libImports.filter(lib => options.globalImports[lib.key] && options.globalImports[lib.key].length > 0)
+      .map(lib => `  ${lib.key}: { ${options.globalImports[lib.key].join(', ')} }`)
       .join(',\n') %>
 <% } %>
 })
