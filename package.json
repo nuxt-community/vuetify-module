@@ -31,9 +31,9 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "fibers": "^4.0.2",
-    "sass": "^1.23.7",
+    "sass": "^1.24.3",
     "sass-loader": "^8.0.0",
-    "vuetify": "^2.2.1",
+    "vuetify": "^2.2.3",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
