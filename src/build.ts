@@ -25,6 +25,7 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   delete vuetifyOptions.defaultAssets
   delete vuetifyOptions.optionsPath
   delete vuetifyOptions.treeShake
+  delete vuetifyOptions.preset
 
   let optionsPath: string | null = this.nuxt.resolver.resolveAlias(options.optionsPath ||
       path.join(this.options.dir!.app || 'app', 'vuetify', 'options.js'))
