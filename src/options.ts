@@ -1,6 +1,6 @@
 import merge from 'deepmerge'
 
-import { VuetifyPreset } from 'vuetify/types/presets'
+import { VuetifyPreset } from 'vuetify/types/services/presets'
 import { ModuleThis } from '@nuxt/types/config/module'
 
 import { VuetifyLoaderOptions } from './loader'
