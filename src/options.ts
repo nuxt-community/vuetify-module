@@ -30,6 +30,7 @@ export interface Options extends Partial<VuetifyPreset> {
     icons?: IconPreset | false
   } | false
   optionsPath?: string
+  preset?: string
   treeShake?: boolean | TreeShakeOptions
 }
 
