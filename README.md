@@ -75,8 +75,9 @@ Usage example :
 $btn-border-radius: 0px;
 
 // If you need to extend Vuetify SASS lists
+$material-light: ( cards: blue );
+
 @import '~vuetify/src/styles/styles.sass';
-$material-light: map-merge($material-light, ( cards: blue ));
 ```
 
 ```js
