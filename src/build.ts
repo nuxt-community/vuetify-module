@@ -24,8 +24,8 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   delete vuetifyOptions.customVariables
   delete vuetifyOptions.defaultAssets
   delete vuetifyOptions.optionsPath
-  delete vuetifyOptions.treeShake
   delete vuetifyOptions.preset
+  delete vuetifyOptions.treeShake
 
   let optionsPath: string | null = this.nuxt.resolver.resolveAlias(options.optionsPath ||
       path.join(this.options.dir!.app || 'app', 'vuetify', 'options.js'))
@@ -45,8 +45,8 @@ export default function setupBuild (this: ModuleThis, options: Options) {
     src: path.resolve(__dirname, '../templates', 'plugin.js'),
     options: {
       defaultIconPreset: options.defaultAssets && options.defaultAssets.icons,
-      treeShake: options.treeShake,
-      preset: options.preset
+      preset: options.preset,
+      treeShake: options.treeShake
     }
   })
 }
