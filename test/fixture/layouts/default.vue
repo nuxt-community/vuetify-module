@@ -75,9 +75,6 @@
 
 <script>
 export default {
-  head: {
-    title: 'Nuxt Vuetify fixture'
-  },
   data () {
     return {
       drawer: true,
@@ -98,6 +95,9 @@ export default {
         { picture: 78, text: 'MKBHD' }
       ]
     }
+  },
+  head: {
+    title: 'Nuxt Vuetify fixture'
   }
 }
 </script>

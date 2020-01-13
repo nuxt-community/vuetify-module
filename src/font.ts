@@ -20,13 +20,15 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
     })
   }
 
+  const sass = this.options.build!.loaders!.sass!
+
   // Add font-family custom variable (only if not Roboto, cause already default in Vuetify styles)
   if (options.family !== 'Roboto') {
-      this.options.build!.loaders.sass.prependData = [`$body-font-family: '${options.family}', sans-serif`, this.options.build!.loaders.sass.prependData].join('\n')
+    sass.prependData = [`$body-font-family: '${options.family}', sans-serif`, sass.prependData].join('\n')
   }
 
   // Add font-size custom variable
   if (options.size) {
-      this.options.build!.loaders.sass.prependData = [`$font-size-root: ${options.size}px`, this.options.build!.loaders.sass.prependData].join('\n')
+    sass.prependData = [`$font-size-root: ${options.size}px`, sass.prependData].join('\n')
   }
 }

@@ -46,7 +46,7 @@ describe('setupFont', () => {
     expect(nuxt.options.head.link).toContainEqual({
       rel: 'stylesheet',
       type: 'text/css',
-      href: `https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap`
+      href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap'
     })
   })
 
@@ -55,8 +55,8 @@ describe('setupFont', () => {
 
     setupFont({
       family: 'Montserrat',
-      size: 20 }
-    )
+      size: 20
+    })
 
     expect(nuxt.options.webfontloader).toEqual({
       google: {
