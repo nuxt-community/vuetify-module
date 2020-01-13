@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/nuxt-community/vuetify-module/compare/v1.9.1...v1.10.0) (2020-01-13)
+
+
+### Features
+
+* add preset support ([#247](https://github.com/nuxt-community/vuetify-module/issues/247)) ([25d9813](https://github.com/nuxt-community/vuetify-module/commit/25d98137ded1296d1ddab9a7c4854102021bce66))
+
+
+### Bug Fixes
+
+* **deps:** bump vuetify version to latest and fix type path ([#237](https://github.com/nuxt-community/vuetify-module/issues/237)) ([b30f5db](https://github.com/nuxt-community/vuetify-module/commit/b30f5db447e74fed1871d59584eb98bbc15dceb6))
+
 ### [1.9.1](https://github.com/nuxt-community/vuetify-module/compare/v1.9.0...v1.9.1) (2019-12-05)
 
 ## [1.9.0](https://github.com/nuxt-community/vuetify-module/compare/v1.8.6...v1.9.0) (2019-10-02)
