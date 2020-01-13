@@ -22,6 +22,7 @@ export interface Options {
   frameworkOptions?: string | Partial<VuetifyPreset>
   globalImports?: GlobalImports
   loader?: boolean | VuetifyLoaderOptions
+  preset?: string
 }
 
 export const defaults = {
