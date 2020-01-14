@@ -33,7 +33,7 @@
     "fibers": "^4.0.2",
     "sass": "^1.24.4",
     "sass-loader": "^8.0.2",
-    "vuetify": "^2.2.3",
+    "vuetify": "^2.2.4",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "@types/sass": "^1.16.0",
     "codecov": "^3.6.1",
     "eslint": "^6.8.0",
-    "husky": "^4.0.7",
+    "husky": "^4.0.9",
     "jest": "^24.9.0",
     "nuxt-edge": "^2.11.1-26314569.9aa8db4e",
     "nuxt-webfontloader": "^1.1.0",
