@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/nuxt-community/vuetify-module/compare/v1.10.0...v1.10.1) (2020-01-15)
+
+
+### Bug Fixes
+
+* update devDependencies & fix code ([7f37ef6](https://github.com/nuxt-community/vuetify-module/commit/7f37ef64f9fc7d23fcb3a84a9ba7cfe963f3f3ca)), closes [#251](https://github.com/nuxt-community/vuetify-module/issues/251)
+
 ## [1.10.0](https://github.com/nuxt-community/vuetify-module/compare/v1.9.1...v1.10.0) (2020-01-13)
 
 
