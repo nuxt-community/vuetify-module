@@ -1,6 +1,5 @@
 import Vue from 'vue'
-
-import Vuetify from '<%= options.globalImports ? 'vuetify/lib' : 'vuetify' %>'
+import Vue from 'vuetify/lib'
 <% if (options.preset) { %>
 import { preset } from '<%= options.preset %>'
 <% } %>
