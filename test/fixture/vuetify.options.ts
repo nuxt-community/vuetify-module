@@ -1,4 +1,4 @@
-import { VuetifyPreset } from 'vuetify/types/presets'
+import { VuetifyPreset } from 'vuetify/types/services/presets'
 import colors from 'vuetify/es5/util/colors'
 
 const options: VuetifyPreset = {
@@ -10,6 +10,6 @@ const options: VuetifyPreset = {
       }
     }
   }
-}
+} as VuetifyPreset
 
 export default options

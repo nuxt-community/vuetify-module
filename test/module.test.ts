@@ -73,7 +73,7 @@ describe('setupFont', () => {
     expect(nuxt.options.head.link).toContainEqual({
       rel: 'stylesheet',
       type: 'text/css',
-      href: `https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap`
+      href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap'
     })
   })
 
@@ -82,8 +82,8 @@ describe('setupFont', () => {
 
     setupFont({
       family: 'Montserrat',
-      size: 20 }
-    )
+      size: 20
+    })
 
     expect(nuxt.options.webfontloader).toEqual({
       google: {
@@ -138,13 +138,21 @@ describe('setupLoader', () => {
 
 describe('setupPlugin', () => {
   test('default', () => {
-    nuxt.options.dir.app = ''
-
     setupPlugin(defaultOptions)
 
-    expect(nuxt.options.build.transpile).toContain('vuetify/lib')
-
     expect(nuxt.options.build.templates.map(t => t.dst)).toEqual(['vuetify/options.js', 'vuetify/plugin.js'])
+  })
+
+  test('transpile array & function', () => {
+    const testTranspile = (transpile) => {
+      nuxt.options.build.transpile = transpile
+      setupPlugin(defaultOptions)
+      transpile = nuxt.options.build.transpile
+      return typeof transpile === 'function' ? transpile() : transpile
+    }
+
+    expect(testTranspile(['foo'])).toEqual(['foo', 'vuetify/lib'])
+    expect(testTranspile(() => ['foo'])).toEqual(['foo', 'vuetify/lib'])
   })
 
   test('frameworkOptions', () => {

@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/vuetify",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.3",
   "description": "Vuetify Module for Nuxt.js",
   "license": "MIT",
   "contributors": [
@@ -31,31 +31,31 @@
   ],
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "sass": "^1.23.7",
-    "sass-loader": "^8.0.0",
-    "vuetify": "^2.1.13",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.2",
+    "vuetify": "^2.2.4",
     "vuetify-loader": "^1.4.3"
   },
   "optionalDependencies": {
-    "fibers": "^4.0.1"
+    "fibers": "^4.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "@nuxt/typescript-build": "latest",
-    "@nuxt/typescript-runtime": "latest",
-    "@nuxtjs/eslint-config-typescript": "latest",
-    "@types/jest": "latest",
-    "@types/sass": "latest",
-    "codecov": "latest",
-    "eslint": "latest",
-    "husky": "latest",
-    "jest": "latest",
-    "nuxt-edge": "latest",
-    "nuxt-webfontloader": "latest",
-    "rimraf": "latest",
-    "standard-version": "latest",
-    "ts-jest": "latest",
-    "typescript": "~3.6"
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@nuxt/typescript-build": "^0.5.6",
+    "@nuxt/typescript-runtime": "^0.3.8",
+    "@nuxtjs/eslint-config-typescript": "^1.0.0",
+    "@types/jest": "^24.9.0",
+    "@types/sass": "^1.16.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.8.0",
+    "husky": "4.0.7",
+    "jest": "^24.9.0",
+    "nuxt-edge": "^2.12.0-26317452.ce3a05c2",
+    "nuxt-webfontloader": "^1.1.0",
+    "rimraf": "^3.0.0",
+    "standard-version": "^7.0.1",
+    "ts-jest": "^24.3.0",
+    "typescript": "~3.7"
   }
 }

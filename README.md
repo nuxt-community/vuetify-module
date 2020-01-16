@@ -75,8 +75,9 @@ Usage example :
 $btn-border-radius: 0px;
 
 // If you need to extend Vuetify SASS lists
+$material-light: ( cards: blue );
+
 @import '~vuetify/src/styles/styles.sass';
-$material-light: map-merge($material-light, ( cards: blue ));
 ```
 
 ```js
@@ -129,7 +130,8 @@ Here are the accepted values for this option :
 
 Please refer to [Vuetify Icons documentation](https://vuetifyjs.com/en/customization/icons) for more information about icons, notably for using only bunch of SVG icons instead of including all icons in your app.
 
-You can also set the whole `defaultAssets` option to `false` to prevent any automatic add of these two assets.
+You can also set the whole `defaultAssets` option to `false` to prevent any automatic add of these two assets. 
+You can read more about adding your own assets in the [Offline applications](https://github.com/nuxt-community/vuetify-module#offline-applications) section. 
 
 ### `optionsPath`
 
@@ -217,7 +219,7 @@ If you're building an application that will need to work offline (more likely a 
 
 It means you must set [`defaultAssets`](#defaultAssets) option to `false`.
 
-For fonts, you may leverage CSS [**@font-face**](https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp) rule with local path of your fonts.
+For fonts, you may leverage CSS [**@font-face**](https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp) rule with local path of your fonts. You may find the [google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin) site useful for generating **@font-face** rules and sourcing replacement files for the default CDNs.
 
 For icons, you can either use the same way than above, or leverage tree-shaken SVG libraries like [**Material Design Icons SVG**](https://github.com/Templarian/MaterialDesign-JS) or [**Font Awesome 5 SVG**](https://fontawesome.com/how-to-use/on-the-web/advanced/svg-javascript-core).
 
