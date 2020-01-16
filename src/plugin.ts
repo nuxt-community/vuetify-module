@@ -27,7 +27,7 @@ export default function setupPlugin (this: ModuleThis, options: Options) {
     options: {
       defaultIconPreset: options.defaultAssets && options.defaultAssets.icons,
       preset: options.preset,
-      treeShake: true
+      globalImports: true
     }
   })
 }
