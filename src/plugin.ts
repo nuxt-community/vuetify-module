@@ -26,8 +26,8 @@ export default function setupPlugin (this: ModuleThis, options: Options) {
     src: path.resolve(__dirname, '../templates', 'plugin.js'),
     options: {
       defaultIconPreset: options.defaultAssets && options.defaultAssets.icons,
-      preset: options.preset,
-      treeShake: true
+      globalImports: options.globalImports,
+      preset: options.preset
     }
   })
 }
