@@ -151,8 +151,8 @@ describe('setupPlugin', () => {
       return typeof transpile === 'function' ? transpile() : transpile
     }
 
-    expect(testTranspile(['foo'])).toEqual(['foo', 'vuetify/lib'])
-    expect(testTranspile(() => ['foo'])).toEqual(['foo', 'vuetify/lib'])
+    expect(testTranspile(['foo'])).toEqual(['foo', 'vuetify'])
+    expect(testTranspile(() => ['foo'])).toEqual(['foo', 'vuetify'])
   })
 
   test('frameworkOptions', () => {

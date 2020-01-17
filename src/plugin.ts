@@ -6,9 +6,9 @@ export default function setupPlugin (this: ModuleThis, options: Options) {
   const transpile = this.options.build!.transpile!
 
   if (Array.isArray(transpile)) {
-    transpile.push('vuetify/lib')
+    transpile.push('vuetify')
   } else {
-    this.options.build!.transpile = ctx => [...transpile(ctx), 'vuetify/lib']
+    this.options.build!.transpile = ctx => [...transpile(ctx), 'vuetify']
   }
 
   const optionsPath = typeof options.frameworkOptions === 'string' && this.nuxt.resolver.resolveAlias(options.frameworkOptions)
