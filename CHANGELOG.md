@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.4](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-01-17)
+
+
+### Bug Fixes
+
+* replace treeShake with globalImports ([#239](https://github.com/nuxt-community/vuetify-module/issues/239)) ([48e6bef](https://github.com/nuxt-community/vuetify-module/commit/48e6bef899b70b26e066f43b3d76e31658692cfb))
+* transpile 'vuetify' instead of 'vuetify/lib' ([059ca8c](https://github.com/nuxt-community/vuetify-module/commit/059ca8cffc90cdb6019a1d88a94264c5b7ff466e))
+
 ## [2.0.0-alpha.3](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.2...v2.0.0-alpha.3) (2020-01-15)
 
 
