@@ -137,7 +137,7 @@ describe('setupBuild', () => {
   test('treeShake with loaderOptions', () => {
     const loaderOptions: VuetifyLoaderOptions = {
       match () {
-        return []
+        return ['foo', 'bar']
       }
     }
 
