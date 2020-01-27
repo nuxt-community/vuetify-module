@@ -20,7 +20,7 @@ export interface VuetifyLoaderOptions {
     camelTag: string,
     path: string,
     component: SFCDescriptor
-  }): Array<[string, string]>
+  }): [string, string] | undefined
 }
 
 export interface Options extends Partial<VuetifyPreset> {
