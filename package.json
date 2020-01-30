@@ -33,7 +33,7 @@
     "fibers": "^4.0.2",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
-    "vuetify": "^2.2.6",
+    "vuetify": "^2.2.8",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
@@ -48,10 +48,10 @@
     "eslint": "^6.8.0",
     "husky": "^4.2.1",
     "jest": "^25.1.0",
-    "nuxt-edge": "^2.11.1-26333291.2d104fe",
+    "nuxt-edge": "^2.11.1-26339051.502ab54",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^7.1.0",
-    "ts-jest": "^25.0.0",
+    "ts-jest": "^25.1.0",
     "typescript": "~3.7"
   }
 }
