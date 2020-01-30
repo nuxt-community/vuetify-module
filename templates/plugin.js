@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuetify from '<%= options.treeShake ? 'vuetify/lib' : 'vuetify' %>'
+import Vuetify from '<%= options.treeShake ? 'vuetify/lib/framework' : 'vuetify' %>'
 <% if (options.preset) { %>
 import { preset } from '<%= options.preset %>'
 <% } %>
