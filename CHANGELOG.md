@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-alpha.5](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-01-30)
+
+
+### Bug Fixes
+
+* use minimal vuetify import ([bc2aa88](https://github.com/nuxt-community/vuetify-module/commit/bc2aa88c8ae1e8d2359ff06e4a460ca737454ae3))
+
 ## [2.0.0-alpha.4](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.3...v2.0.0-alpha.4) (2020-01-17)
 
 
