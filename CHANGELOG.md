@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.3](https://github.com/nuxt-community/vuetify-module/compare/v1.10.2...v1.10.3) (2020-01-30)
+
+
+### Bug Fixes
+
+* fix VuetifyLoaderOptions match type ([#273](https://github.com/nuxt-community/vuetify-module/issues/273)) ([2923943](https://github.com/nuxt-community/vuetify-module/commit/2923943a05b3940b31277ab64234535eda4c3ceb))
+* use minimal vuetify import ([#267](https://github.com/nuxt-community/vuetify-module/issues/267)) ([1dffcbb](https://github.com/nuxt-community/vuetify-module/commit/1dffcbbd4fcce8bae3f9b03d6b83cf0434588790))
+
 ### [1.10.2](https://github.com/nuxt-community/vuetify-module/compare/v1.10.1...v1.10.2) (2020-01-17)
 
 ### [1.10.1](https://github.com/nuxt-community/vuetify-module/compare/v1.10.0...v1.10.1) (2020-01-15)
