@@ -1,7 +1,7 @@
 import { ModuleThis } from '@nuxt/types/config/module'
 
 export interface FontOptions {
-  family?: string
+  family?: string | string[]
   size?: number
 }
 
@@ -24,7 +24,10 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
 
   // Add font-family custom variable (only if not Roboto, cause already default in Vuetify styles)
   if (options.family !== 'Roboto') {
-    sass.prependData = [`$body-font-family: '${options.family}', sans-serif`, sass.prependData].join('\n')
+    const userFontFamily = Array.isArray(options.family)
+      ? options.family.map(x => `'${x}'`).join(', ')
+      : `'${options.family}'`
+    sass.prependData = [`$body-font-family: ${userFontFamily}, sans-serif`, sass.prependData].join('\n')
   }
 
   // Add font-size custom variable
