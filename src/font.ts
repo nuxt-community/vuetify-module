@@ -2,7 +2,7 @@ import { ModuleThis } from '@nuxt/types/config/module'
 import { prependData as sassPrependData } from './sass'
 
 export interface FontOptions {
-  family?: string
+  family?: string | string[]
   size?: number
 }
 
@@ -22,7 +22,12 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
   }
 
   // Add font-family custom variable (only if not Roboto, cause already default in Vuetify styles)
-  options.family !== 'Roboto' && sassPrependData.call(this, `$body-font-family: '${options.family}', sans-serif`)
+  if (options.family !== 'Roboto') {
+    const userFontFamily = Array.isArray(options.family)
+      ? options.family.map(x => `'${x}'`).join(', ')
+      : `'${options.family}'`
+    sassPrependData.call(this, `$body-font-family: ${userFontFamily}, sans-serif`)
+  }
 
   // Add font-size custom variable
   options.size && sassPrependData.call(this, `$font-size-root: ${options.size}px`)

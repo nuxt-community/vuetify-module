@@ -92,12 +92,26 @@ describe('setupFont', () => {
     })
 
     const { sass, scss } = nuxt.options.build.loaders
+    const expectedFont = "$body-font-family: 'Montserrat', sans-serif"
+    const expectedSize = '$font-size-root: 20px'
 
-    expect(sass.prependData).toContain("$body-font-family: 'Montserrat', sans-serif")
-    expect(scss.prependData).toContain("$body-font-family: 'Montserrat', sans-serif;")
+    expect(sass.prependData).toContain(expectedFont)
+    expect(sass.prependData).toContain(expectedSize)
 
-    expect(sass.prependData).toContain('$font-size-root: 20px')
-    expect(scss.prependData).toContain('$font-size-root: 20px;')
+    expect(scss.prependData).toContain(expectedFont + ';')
+    expect(scss.prependData).toContain(expectedSize + ';')
+  })
+
+  test('with list of fonts', () => {
+    setupFont({
+      family: ['Montserrat', 'Roboto']
+    })
+
+    const { sass, scss } = nuxt.options.build.loaders
+    const expected = "$body-font-family: 'Montserrat', 'Roboto', sans-serif"
+
+    expect(sass.prependData).toContain(expected)
+    expect(scss.prependData).toContain(expected + ';')
   })
 })
 
