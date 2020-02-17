@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.0](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.5...v2.0.0-beta.0) (2020-02-17)
+
+
+### Features
+
+* allow for list of custom fonts ([fa008f5](https://github.com/nuxt-community/vuetify-module/commit/fa008f54f39d31895a10e6e1186e0d400cdb3d64)), closes [#269](https://github.com/nuxt-community/vuetify-module/issues/269)
+
 ## [2.0.0-alpha.5](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.4...v2.0.0-alpha.5) (2020-01-30)
 
 
