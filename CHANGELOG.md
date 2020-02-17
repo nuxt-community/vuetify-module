@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/nuxt-community/vuetify-module/compare/v1.10.3...v1.11.0) (2020-02-17)
+
+
+### Features
+
+* allow for list of custom fonts ([#269](https://github.com/nuxt-community/vuetify-module/issues/269)) ([3644437](https://github.com/nuxt-community/vuetify-module/commit/3644437cb01630b43aaa1898bfa352469b8faa91))
+
 ### [1.10.3](https://github.com/nuxt-community/vuetify-module/compare/v1.10.2...v1.10.3) (2020-01-30)
 
 
