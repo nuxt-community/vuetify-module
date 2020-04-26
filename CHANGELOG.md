@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.2](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2020-04-26)
+
+
+### Bug Fixes
+
+* **deps:** optional fibers can be v4 or v5 ([4b350b7](https://github.com/nuxt-community/vuetify-module/commit/4b350b71666c751c11e1b66566109830cb475c5e))
+
 ## [2.0.0-beta.1](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2020-04-26)
 
 
