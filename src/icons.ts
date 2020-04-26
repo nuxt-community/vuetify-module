@@ -10,9 +10,12 @@ const presetsCDN = {
 export type IconPreset = keyof typeof presetsCDN
 
 export default function setupIcons (this: ModuleThis, preset: IconPreset) {
-  this.options.head!.link!.push({
-    rel: 'stylesheet',
-    type: 'text/css',
-    href: presetsCDN[preset]
-  })
+  // istanbul ignore else
+  if (presetsCDN[preset]) {
+    this.options.head!.link!.push({
+      rel: 'stylesheet',
+      type: 'text/css',
+      href: presetsCDN[preset]
+    })
+  }
 }

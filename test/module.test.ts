@@ -155,18 +155,7 @@ describe('setupPlugin', () => {
     setupPlugin(defaultOptions)
 
     expect(nuxt.options.build.templates.map(t => t.dst)).toEqual(['vuetify/options.js', 'vuetify/plugin.js'])
-  })
-
-  test('transpile array & function', () => {
-    const testTranspile = (transpile) => {
-      nuxt.options.build.transpile = transpile
-      setupPlugin(defaultOptions)
-      transpile = nuxt.options.build.transpile
-      return typeof transpile === 'function' ? transpile() : transpile
-    }
-
-    expect(testTranspile(['foo'])).toEqual(['foo', 'vuetify'])
-    expect(testTranspile(() => ['foo'])).toEqual(['foo', 'vuetify'])
+    expect(nuxt.options.build.transpile).toContain('vuetify')
   })
 
   test('frameworkOptions', () => {
