@@ -37,7 +37,7 @@
     "vuetify-loader": "^1.4.3"
   },
   "optionalDependencies": {
-    "fibers": "^5.0.0"
+    "fibers": "^4.0.0 || ^5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
