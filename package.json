@@ -31,9 +31,9 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "fibers": "^4.0.2",
-    "sass": "^1.25.0",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "vuetify": "^2.2.12",
+    "vuetify": "^2",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
-    "nuxt-edge": "^2.11.1-26364975.19fd3e4",
+    "nuxt-edge": "2.11.1-26375059.fd5fefe",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^7.1.0",
     "ts-jest": "^25.2.0",
