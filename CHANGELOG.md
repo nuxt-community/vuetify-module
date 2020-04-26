@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0-beta.1](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2020-04-26)
+
+
+### Bug Fixes
+
+* bump dependencies & fix presets issue ([d65f5b8](https://github.com/nuxt-community/vuetify-module/commit/d65f5b8af775a8a818fe715f9ca52a69f605c5dd))
+
 ## [2.0.0-beta.0](https://github.com/nuxt-community/vuetify-module/compare/v2.0.0-alpha.5...v2.0.0-beta.0) (2020-02-17)
 
 
