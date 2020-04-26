@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/nuxt-community/vuetify-module/compare/v1.11.0...v1.11.1) (2020-04-26)
+
+
+### Bug Fixes
+
+* check if preset is in presetsCDN ([#291](https://github.com/nuxt-community/vuetify-module/issues/291)) ([57a0ceb](https://github.com/nuxt-community/vuetify-module/commit/57a0ceb74551c20ca9fccf53b5083ad805e500a8))
+
 ## [1.11.0](https://github.com/nuxt-community/vuetify-module/compare/v1.10.3...v1.11.0) (2020-02-17)
 
 
