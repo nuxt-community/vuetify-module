@@ -23,7 +23,7 @@
 1. Add `@nuxtjs/vuetify` dependency to your project
 
 ```bash
-yarn add --dev @nuxtjs/vuetify # or npm install --save-dev @nuxtjs/vuetify
+yarn add @nuxtjs/vuetify # or npm install --save @nuxtjs/vuetify
 ```
 
 2. Add `@nuxtjs/vuetify` to the `buildModules` section of `nuxt.config.js`

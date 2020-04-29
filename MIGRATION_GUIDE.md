@@ -20,7 +20,7 @@ sass-loader
 Install `@nuxtjs/vuetify` as devDependency :
 
 ```sh
-yarn add --dev @nuxtjs/vuetify # npm install --save-dev @nuxtjs/vuetify
+yarn add @nuxtjs/vuetify # npm install --save @nuxtjs/vuetify
 ```
 
 ## III. Migrating module options
