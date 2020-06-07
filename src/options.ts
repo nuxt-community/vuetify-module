@@ -6,6 +6,7 @@ import { ModuleThis } from '@nuxt/types/config/module'
 
 import { FontOptions } from './font'
 import { IconPreset } from './icons'
+import { iconInjectorOptions } from './iconInjector'
 
 export interface TreeShakeOptions {
   components?: string[]
@@ -31,7 +32,8 @@ export interface Options extends Partial<VuetifyPreset> {
   } | false
   optionsPath?: string
   preset?: string
-  treeShake?: boolean | TreeShakeOptions
+  treeShake?: boolean | TreeShakeOptions,
+  iconInjection?: true | iconInjectorOptions
 }
 
 export const defaults = {

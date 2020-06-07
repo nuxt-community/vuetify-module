@@ -133,6 +133,21 @@ Please refer to [Vuetify Icons documentation](https://vuetifyjs.com/en/customiza
 You can also set the whole `defaultAssets` option to `false` to prevent any automatic add of these two assets. 
 You can read more about adding your own assets in the [Offline applications](https://github.com/nuxt-community/vuetify-module#offline-applications) section. 
 
+### `iconInjection`
+ 
+ - Type: `Object` or `Boolean`
+ - Default: `false`
+
+If enabled `defaultAssets.icons` is ignored.
+
+When enabled `vuetify-icon-injector` is added as an `vue-template-compiler` Module. This removes the need of adding the icon Font to your project - so you page will load faster. In your template icon Strings are automaticly replaced with corresponding SVG-Path (only for Props that expect Icon name or SVG-Path).
+
+You can add custom icons and mark custom component props as props that can include icons. For more info see the docs for `vuetify-icon-injector`.
+
+:warning: This changes the Output of `vue-template-compiler` so it can break your code if you are useing Variables named `mdi-***`.
+
+:warning: Only works for Material Design Icons.
+
 ### `optionsPath`
 
 - Type: `String`

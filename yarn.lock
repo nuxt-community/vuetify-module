@@ -10890,6 +10890,11 @@ vue@^2.6.11:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
+vuetify-icon-injector@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vuetify-icon-injector/-/vuetify-icon-injector-1.0.3.tgz#612559a6bcbe2ecd742a057da91e5e6109c7dacc"
+  integrity sha512-pIWnNue72Z8yEgEa2mSSb0gMY6VUFbbgDRk/EF4mUTgQpKq7J+EE92+D6gDjyxliofM5GmMTTWVAEcpgNAYBgg==
+
 vuetify-loader@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/vuetify-loader/-/vuetify-loader-1.4.3.tgz#df1323c558be09890877e5fbe817b3a71a6c538d"

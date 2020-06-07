@@ -34,6 +34,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vuetify": "^2",
+    "vuetify-icon-injector": "^1.0.3",
     "vuetify-loader": "^1.4.3"
   },
   "devDependencies": {
