@@ -6,7 +6,7 @@ import setupBuild from './build'
 import setupFont from './font'
 import setupIcons from './icons'
 import setupSass from './sass'
-import setupIconInjector from "./iconInjector";
+import setupIconInjector from './iconInjector'
 
 declare module '@nuxt/types' {
   interface Configuration {
@@ -24,12 +24,12 @@ const vuetifyModule: Module<Options> = function (moduleOptions) {
 
     if (typeof options.defaultAssets === 'object') {
       options.defaultAssets.font && setupFont.call(this, options.defaultAssets.font)
-      if(!options.iconInjection) {
+      if (!options.iconInjection) {
         options.defaultAssets.icons && setupIcons.call(this, options.defaultAssets.icons)
       }
     }
 
-    if(options.iconInjection) {
+    if (options.iconInjection) {
       setupIconInjector.call(this, options.iconInjection !== true ? options.iconInjection : {})
     }
 
