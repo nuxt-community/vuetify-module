@@ -50,7 +50,7 @@
     "jest": "^25.4.0",
     "nuxt-edge": "2.11.1-26375059.fd5fefe",
     "nuxt-webfontloader": "^1.1.0",
-    "standard-version": "^7.1.0",
+    "standard-version": "^8.0.1",
     "ts-jest": "^25.4.0",
     "typescript": "~3.8"
   }
