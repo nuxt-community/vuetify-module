@@ -30,11 +30,7 @@
   ],
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "fibers": "^4.0.3",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vuetify": "^2",
-    "vuetify-loader": "^1.4.3"
+    "vuetify": "^2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -52,6 +48,10 @@
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^7.1.0",
     "ts-jest": "^25.4.0",
+    "fibers": "^4.0.3",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vuetify-loader": "^1.4.3",
     "typescript": "~3.8"
   }
 }
