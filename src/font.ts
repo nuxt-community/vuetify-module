@@ -27,11 +27,11 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
     const userFontFamily = Array.isArray(options.family)
       ? options.family.map(x => `'${x}'`).join(', ')
       : `'${options.family}'`
-    sass.prependData = [`$body-font-family: ${userFontFamily}, sans-serif`, sass.prependData].join('\n')
+    sass.additionalData = [`$body-font-family: ${userFontFamily}, sans-serif`, sass.additionalData].join('\n')
   }
 
   // Add font-size custom variable
   if (options.size) {
-    sass.prependData = [`$font-size-root: ${options.size}px`, sass.prependData].join('\n')
+    sass.additionalData = [`$font-size-root: ${options.size}px`, sass.additionalData].join('\n')
   }
 }
