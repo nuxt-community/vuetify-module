@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext"],
+    "target": "es2019",
+    "lib": ["dom", "es2019"],
     "module": "esnext",
     "moduleResolution": "node",
     "skipLibCheck": true,

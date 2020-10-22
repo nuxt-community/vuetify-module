@@ -1,10 +1,10 @@
-import { NuxtConfigurationLoaders } from '@nuxt/types/config/build'
+import { NuxtOptionsLoaders } from '@nuxt/types/config/build'
 import { ModuleThis } from '@nuxt/types/config/module'
 import dartSass from 'sass'
 import { Options } from './options'
 
 export default function setupSass (this: ModuleThis, customVariables: Options['customVariables']) {
-  const { sass, scss } = this.options.build!.loaders as Required<Pick<NuxtConfigurationLoaders, 'sass' | 'scss'>>
+  const { sass, scss } = this.options.build!.loaders as Required<Pick<NuxtOptionsLoaders, 'sass' | 'scss'>>
 
   // Use Dart Sass
   sass.implementation = scss.implementation = dartSass

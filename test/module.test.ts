@@ -1,4 +1,4 @@
-import { Nuxt } from '@nuxt/core-edge'
+import { Nuxt } from '@nuxt/core'
 import dartSass from 'sass'
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 
