@@ -189,11 +189,20 @@ export default function ({ app }) {
 
 ### `treeShake`
 
-- Type: `Boolean`
+- Type: `Object` or `Boolean`
 - Default: `process.env.NODE_ENV === 'production'`
 
 Uses [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader) to enable automatic [tree-shaking](https://vuetifyjs.com/en/customization/a-la-carte).
 Enabled only for production by default.
+
+You can set object as a set of options to [manually import](https://vuetifyjs.com/en/features/treeshaking/#manually-importing) Vuetify modules globally:
+
+| Key | Type | Value |
+| --- | --- | --- |
+| components | string[] | array of name of Vuetify components to import globally |
+| directives | string[] | array of name of Vuetify directives to import globally |
+| loaderOptions | function | loader option which applies to VuetifyLoaderPlugin |
+| transitions | string[] | array of name of [Vuetify transitions](https://vuetifyjs.com/en/styles/transitions/) to import globally |
 
 ## TypeScript
 
