@@ -47,7 +47,7 @@
     "codecov": "^3.6.5",
     "eslint": "^6.8.0",
     "husky": "^4.2.5",
-    "jest": "^25.4.0",
+    "jest": "^26.6.3",
     "nuxt-edge": "2.11.1-26375059.fd5fefe",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^7.1.0",
