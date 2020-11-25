@@ -31,27 +31,27 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "fibers": "^4.0.3",
-    "sass": "^1.26.5",
+    "sass": "^1.29.0",
     "sass-loader": "^8.0.2",
     "vuetify": "^2",
-    "vuetify-loader": "^1.4.3"
+    "vuetify-loader": "^1.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@nuxt/typescript-build": "^0.6.6",
-    "@nuxt/typescript-runtime": "^0.4.6",
+    "@nuxt/typescript-build": "^0.6.7",
+    "@nuxt/typescript-runtime": "^0.4.10",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
-    "@types/jest": "^25.2.1",
+    "@types/jest": "^25.2.3",
     "@types/sass": "^1.16.0",
     "codecov": "^3.6.5",
     "eslint": "^6.8.0",
-    "husky": "^4.2.5",
-    "jest": "^25.4.0",
-    "nuxt-edge": "2.11.1-26375059.fd5fefe",
+    "husky": "^4.3.0",
+    "jest": "^25.5.4",
+    "nuxt-edge": "2.11.1-26378723.c5d0067",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^7.1.0",
-    "ts-jest": "^25.4.0",
+    "ts-jest": "^25.5.1",
     "typescript": "~3.8"
   }
 }
