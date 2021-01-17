@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.3](https://github.com/nuxt-community/vuetify-module/compare/v1.11.2...v1.11.3) (2021-01-17)
+
+
+### Bug Fixes
+
+* remove fibers dependency to support node.js 14 on Windows ([#390](https://github.com/nuxt-community/vuetify-module/issues/390)) ([7a02126](https://github.com/nuxt-community/vuetify-module/commit/7a021268b3901a9716a0f82d20ff034c454d9a95))
+* sass-loader use additionalData vs prependData ([a92eaf1](https://github.com/nuxt-community/vuetify-module/commit/a92eaf175d626be20b68327b9b2be3d188ba59dd))
+
 ### [1.11.2](https://github.com/nuxt-community/vuetify-module/compare/v1.11.1...v1.11.2) (2020-04-26)
 
 ### [1.11.1](https://github.com/nuxt-community/vuetify-module/compare/v1.11.0...v1.11.1) (2020-04-26)
