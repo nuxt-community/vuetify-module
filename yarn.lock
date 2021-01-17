@@ -11400,10 +11400,10 @@ vuetify-loader@^1.6.0:
     file-loader "^4.0.0"
     loader-utils "^1.2.0"
 
-vuetify@^2:
-  version "2.2.25"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.25.tgz#d2d57a52c3694a9982a49ec1a39e397b1a317294"
-  integrity sha512-sW//1OM2mH/tPmVm00fUKVZYOTooBh1/LSpOzIYCrHOZOL2JA3/3zM7zn7gyiJJzRTBklk5C+6YPI8lqz07d4g==
+vuetify@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.4.2.tgz#d37d160c1fc6b241fc166a32980b34590a017d6e"
+  integrity sha512-8W1928Fv6GKwLiOThutYf2wtD5C9+vcCavlI8NT0YxNOVvluoL8xrep8mGGwDsCkay+4LzaAX92owKeNi3kpWg==
 
 vuex@^3.1.2:
   version "3.1.2"
