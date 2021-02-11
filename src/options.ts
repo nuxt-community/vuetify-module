@@ -23,7 +23,7 @@ export interface VuetifyLoaderOptions {
   }): [string, string] | undefined
 }
 
-export interface Options extends UserVuetifyPreset {
+export interface Options extends Omit<UserVuetifyPreset, 'preset'> {
   customVariables?: string[]
   defaultAssets?: {
     font?: FontOptions,
