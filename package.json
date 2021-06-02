@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "sass": "^1.32.4",
+    "sass": "~1.32.13",
     "sass-loader": "^10.1.1",
     "vuetify": "^2.4.2",
     "vuetify-loader": "^1.6.0"
