@@ -1,5 +1,7 @@
 import { ModuleThis } from '@nuxt/types/config/module'
 
+import type { SassOptionsV10 } from './sass'
+
 export interface FontOptions {
   family?: string | string[]
   size?: number
@@ -8,19 +10,20 @@ export interface FontOptions {
 export default function setupFont (this: ModuleThis, options: FontOptions) {
   const family = `${options.family}:100,300,400,500,700,900&display=swap`
 
+  /* istanbul ignore else */
   if (this.options.modules!.some(mod => mod === 'nuxt-webfontloader')) {
     this.options.webfontloader = this.options.webfontloader || {}
     this.options.webfontloader.google = this.options.webfontloader.google || {}
     this.options.webfontloader.google.families = [...this.options.webfontloader.google.families || [], family]
-  } else {
-    this.options.head!.link!.push({
+  } else if (typeof this.options.head === 'object') {
+    this.options.head.link!.push({
       rel: 'stylesheet',
       type: 'text/css',
       href: `https://fonts.googleapis.com/css?family=${family}`
     })
   }
 
-  const sass = this.options.build!.loaders!.sass!
+  const sass : SassOptionsV10 = this.options.build!.loaders!.sass!
 
   // Add font-family custom variable (only if not Roboto, cause already default in Vuetify styles)
   if (options.family !== 'Roboto') {

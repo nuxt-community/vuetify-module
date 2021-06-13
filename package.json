@@ -38,19 +38,20 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@nuxt/typescript-build": "^0.6.7",
-    "@nuxt/typescript-runtime": "^0.4.10",
-    "@nuxtjs/eslint-config-typescript": "^1.0.2",
-    "@types/jest": "^25.2.3",
+    "@nuxt/types": "^2.15.6",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/eslint-config-typescript": "^4.0.0",
+    "@types/jest": "^26.0.15",
     "@types/sass": "^1.16.0",
     "codecov": "^3.8.2",
-    "eslint": "^6.8.0",
-    "husky": "^4.3.8",
-    "jest": "^25.5.4",
-    "nuxt-edge": "2.11.1-26378723.c5d0067",
+    "eslint": "^7.11.0",
+    "husky": "^4.2.5",
+    "jest": "^26.6.0",
+    "nuxt": "^2.15.6",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^9.3.0",
-    "ts-jest": "^25.5.1",
-    "typescript": "~3.8"
+    "ts-jest": "^26.4.1",
+    "typescript": "~4.0"
   }
 }

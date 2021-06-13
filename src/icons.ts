@@ -11,7 +11,7 @@ export type IconPreset = keyof typeof presetsCDN
 
 export default function setupIcons (this: ModuleThis, preset: IconPreset) {
   // istanbul ignore else
-  if (presetsCDN[preset]) {
+  if (presetsCDN[preset] && typeof this.options.head === 'object') {
     this.options.head!.link!.push({
       rel: 'stylesheet',
       type: 'text/css',
