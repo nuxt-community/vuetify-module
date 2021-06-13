@@ -11,7 +11,7 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
   const family = `${options.family}:100,300,400,500,700,900&display=swap`
 
   /* istanbul ignore else */
-  if (this.options.modules!.some(mod => mod === 'nuxt-webfontloader')) {
+  if (this.options.modules!.includes('nuxt-webfontloader')) {
     this.options.webfontloader = this.options.webfontloader || {}
     this.options.webfontloader.google = this.options.webfontloader.google || {}
     this.options.webfontloader.google.families = [...this.options.webfontloader.google.families || [], family]
