@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/nuxt-community/vuetify-module/compare/v1.12.0...v1.12.1) (2021-06-13)
+
+
+### Bug Fixes
+
+* require sass@1.32.x ([f7a65cf](https://github.com/nuxt-community/vuetify-module/commit/f7a65cf41e5f8b39469db0411f398a93a5865e31))
+
 ## [1.12.0](https://github.com/nuxt-community/vuetify-module/compare/v1.11.3...v1.12.0) (2021-06-13)
 
 
