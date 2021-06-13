@@ -1536,7 +1536,7 @@
     rc9 "^1.2.0"
     std-env "^2.3.0"
 
-"@nuxt/types@^2.14.7":
+"@nuxt/types@^2.15.6":
   version "2.15.6"
   resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-2.15.6.tgz#8be28b21a3157b90047834721db97325e4766dcb"
   integrity sha512-3edRQDAMcpHN4cRWR9vB1ugyegJ+w8UV1vHSxV48/LK9qsgBE8P7wKSK6BvHLqHpnMoB0PxrUXizprpLluwpHA==

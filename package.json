@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@nuxt/types": "^2.14.7",
+    "@nuxt/types": "^2.15.6",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/eslint-config-typescript": "^4.0.0",
