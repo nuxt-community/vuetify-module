@@ -1,7 +1,7 @@
 import merge from 'deepmerge'
 
 import { SFCDescriptor } from 'vue-template-compiler'
-import { VuetifyPreset } from 'vuetify/types/services/presets'
+import { UserVuetifyPreset } from 'vuetify/types/services/presets'
 import { ModuleThis } from '@nuxt/types/config/module'
 
 import { FontOptions } from './font'
@@ -23,7 +23,7 @@ export interface VuetifyLoaderOptions {
   }): [string, string] | undefined
 }
 
-export interface Options extends Partial<VuetifyPreset> {
+export interface Options extends Omit<UserVuetifyPreset, 'preset'> {
   customVariables?: string[]
   defaultAssets?: {
     font?: FontOptions,
