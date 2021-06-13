@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/nuxt-community/vuetify-module/compare/v1.11.3...v1.12.0) (2021-06-13)
+
+
+### Features
+
+* compatible with Nuxt 2.14 and typescript 4 ([#395](https://github.com/nuxt-community/vuetify-module/issues/395)) ([16c2bca](https://github.com/nuxt-community/vuetify-module/commit/16c2bca8e6e293ada9ea4f00d4a2e767d5be5671))
+
+
+### Bug Fixes
+
+* **types:** use UserVuetifyPreset instead of VuetifyPreset ([#419](https://github.com/nuxt-community/vuetify-module/issues/419)) ([d75b2be](https://github.com/nuxt-community/vuetify-module/commit/d75b2bea1bf68a66f2f77e97dd88d5f0e01d4ad2))
+* lock sass version to ~1.32.13 ([#452](https://github.com/nuxt-community/vuetify-module/issues/452)) ([4868782](https://github.com/nuxt-community/vuetify-module/commit/48687822d21bf87b375c934634f0ac02a05f47a8)), closes [#446](https://github.com/nuxt-community/vuetify-module/issues/446)
+
 ### [1.11.3](https://github.com/nuxt-community/vuetify-module/compare/v1.11.2...v1.11.3) (2021-01-17)
 
 
