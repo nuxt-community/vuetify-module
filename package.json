@@ -41,7 +41,7 @@
     "@nuxt/types": "^2.15.6",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxt/typescript-runtime": "^2.0.0",
-    "@nuxtjs/eslint-config-typescript": "^4.0.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@types/jest": "^26.0.23",
     "@types/sass": "^1.16.0",
     "codecov": "^3.8.2",
