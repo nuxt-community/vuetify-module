@@ -64,10 +64,10 @@ describe('setupFont', () => {
       }
     })
 
-    const { prependData } = nuxt.options.build.loaders.sass
+    const { additionalData } = nuxt.options.build.loaders.sass
 
-    expect(prependData).toContain("$body-font-family: 'Montserrat', sans-serif")
-    expect(prependData).toContain('$font-size-root: 20px')
+    expect(additionalData).toContain("$body-font-family: 'Montserrat', sans-serif")
+    expect(additionalData).toContain('$font-size-root: 20px')
   })
 
   test('with list of fonts', () => {
@@ -76,9 +76,9 @@ describe('setupFont', () => {
       size: 20
     })
 
-    const { prependData } = nuxt.options.build.loaders.sass
+    const { additionalData } = nuxt.options.build.loaders.sass
 
-    expect(prependData).toContain("$body-font-family: 'Montserrat', 'Roboto', sans-serif")
+    expect(additionalData).toContain("$body-font-family: 'Montserrat', 'Roboto', sans-serif")
   })
 })
 
@@ -112,8 +112,8 @@ describe('setupSass', () => {
   test('customVariables', () => {
     setupSass(['/path/to/variables.scss'])
 
-    expect(nuxt.options.build.loaders.sass.prependData).toContain("@import '/path/to/variables.scss'")
-    expect(nuxt.options.build.loaders.scss.prependData).toContain("@import '/path/to/variables.scss';")
+    expect(nuxt.options.build.loaders.sass.additionalData).toContain("@import '/path/to/variables.scss'")
+    expect(nuxt.options.build.loaders.scss.additionalData).toContain("@import '/path/to/variables.scss';")
   })
 })
 
