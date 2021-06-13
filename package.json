@@ -46,7 +46,7 @@
     "@types/sass": "^1.16.0",
     "codecov": "^3.8.2",
     "eslint": "^7.28.0",
-    "husky": "^4.3.8",
+    "husky": "^6.0.0",
     "jest": "^27.0.4",
     "nuxt": "^2.15.6",
     "nuxt-webfontloader": "^1.1.0",
