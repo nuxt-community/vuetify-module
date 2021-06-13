@@ -6,7 +6,7 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsConfig: 'tsconfig.test.json',
+      tsconfig: 'tsconfig.test.json',
       diagnostics: {
         ignoreCodes: [2345]
       }
