@@ -1,5 +1,6 @@
 import { ModuleThis } from '@nuxt/types/config/module'
-import { Options as SassOptions } from 'sass-loader'
+
+import type { SassOptionsV10 } from './sass'
 
 export interface FontOptions {
   family?: string | string[]
@@ -21,7 +22,7 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
     })
   }
 
-  const sass : SassOptions & { additionalData?: string } = this.options.build!.loaders!.sass!
+  const sass : SassOptionsV10 = this.options.build!.loaders!.sass!
 
   // Add font-family custom variable (only if not Roboto, cause already default in Vuetify styles)
   if (options.family !== 'Roboto') {
