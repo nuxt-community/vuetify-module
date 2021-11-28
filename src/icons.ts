@@ -1,4 +1,4 @@
-import { ModuleThis } from '@nuxt/types/config/module'
+import { Module } from '@nuxt/types/config/module'
 
 const presetsCDN = {
   mdi: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
@@ -9,7 +9,7 @@ const presetsCDN = {
 
 export type IconPreset = keyof typeof presetsCDN
 
-export default function setupIcons (this: ModuleThis, preset: IconPreset) {
+const setupIcons : Module<IconPreset> = function (preset) {
   // istanbul ignore else
   if (presetsCDN[preset] && typeof this.options.head === 'object') {
     this.options.head!.link!.push({
@@ -19,3 +19,5 @@ export default function setupIcons (this: ModuleThis, preset: IconPreset) {
     })
   }
 }
+
+export default setupIcons

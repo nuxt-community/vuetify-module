@@ -1,21 +1,30 @@
 import path from 'path'
 import fs from 'fs'
-import { ModuleThis } from '@nuxt/types/config/module'
+import { Module } from '@nuxt/types/config/module'
 import { Options } from './options'
 
-export default function setupBuild (this: ModuleThis, options: Options) {
+const setupBuild: Module<Options> = function (
+  options
+) {
   if (!options.treeShake) {
     this.options.css!.push('vuetify/dist/vuetify.css')
   }
 
   // Enable tree-shaking with VuetifyLoader (https://github.com/vuetifyjs/vuetify-loader)
   if (options.treeShake) {
-    const VuetifyLoaderPlugin = this.nuxt.resolver.requireModule('vuetify-loader/lib/plugin')
-
-    ;(this.options.build!.transpile! as string[]).push('vuetify/lib')
+    const VuetifyLoaderPlugin = this.nuxt.resolver.requireModule(
+      'vuetify-loader/lib/plugin'
+    );
+    (this.options.build!.transpile! as string[]).push('vuetify/lib')
 
     this.extendBuild((config) => {
-      config.plugins!.push(new VuetifyLoaderPlugin(typeof options.treeShake === 'object' ? options.treeShake.loaderOptions : {}))
+      config.plugins!.push(
+        new VuetifyLoaderPlugin(
+          typeof options.treeShake === 'object'
+            ? options.treeShake.loaderOptions
+            : {}
+        )
+      )
     })
   }
 
@@ -27,14 +36,18 @@ export default function setupBuild (this: ModuleThis, options: Options) {
   delete vuetifyOptions.preset
   delete vuetifyOptions.treeShake
 
-  let optionsPath: string | null = this.nuxt.resolver.resolveAlias(options.optionsPath ||
-      path.join(this.options.dir!.app || 'app', 'vuetify', 'options.js'))
+  let optionsPath: string | null = this.nuxt.resolver.resolveAlias(
+    options.optionsPath ||
+      path.join(this.options.dir!.app || 'app', 'vuetify', 'options.js')
+  )
 
   optionsPath = fs.existsSync(optionsPath!) ? optionsPath : null
 
   // Register options template
   this.addTemplate({
-    fileName: `vuetify/options.${optionsPath && optionsPath.endsWith('ts') ? 'ts' : 'js'}`,
+    fileName: `vuetify/options.${
+      optionsPath && optionsPath.endsWith('ts') ? 'ts' : 'js'
+    }`,
     src: optionsPath || path.resolve(__dirname, '../templates', 'options.js'),
     options: vuetifyOptions
   })
@@ -50,3 +63,5 @@ export default function setupBuild (this: ModuleThis, options: Options) {
     }
   })
 }
+
+export default setupBuild

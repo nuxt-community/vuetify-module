@@ -2,7 +2,7 @@ import merge from 'deepmerge'
 
 import { SFCDescriptor } from 'vue-template-compiler'
 import { UserVuetifyPreset } from 'vuetify/types/services/presets'
-import { ModuleThis } from '@nuxt/types/config/module'
+import { NuxtOptions } from '@nuxt/types/config'
 
 import { FontOptions } from './font'
 import { IconPreset } from './icons'
@@ -46,7 +46,7 @@ export const defaults = {
   treeShake: process.env.NODE_ENV === 'production'
 }
 
-export default function initOptions (this: ModuleThis, moduleOptions?: Options): Required<Options> {
+export default function initOptions (this: { options: NuxtOptions }, moduleOptions?: Options): Required<Options> {
   const options = merge.all([
     defaults,
     this.options.vuetify || {},
