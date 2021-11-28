@@ -1,4 +1,4 @@
-import { ModuleThis } from '@nuxt/types/config/module'
+import { Module } from '@nuxt/types/config/module'
 
 import type { SassOptionsV10 } from './sass'
 
@@ -7,7 +7,7 @@ export interface FontOptions {
   size?: number
 }
 
-export default function setupFont (this: ModuleThis, options: FontOptions) {
+const setupFont: Module<FontOptions> = function (options) {
   const family = `${options.family}:100,300,400,500,700,900&display=swap`
 
   /* istanbul ignore else */
@@ -38,3 +38,5 @@ export default function setupFont (this: ModuleThis, options: FontOptions) {
     sass.additionalData = [`$font-size-root: ${options.size}px`, sass.additionalData].join('\n')
   }
 }
+
+export default setupFont
