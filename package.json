@@ -22,7 +22,8 @@
     "build": "tsc",
     "lint": "eslint --ext .ts,.js,.vue .",
     "test": "yarn lint && jest",
-    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish"
+    "release": "yarn test && yarn build && standard-version && git push --follow-tags && npm publish",
+    "prepare": "husky install"
   },
   "files": [
     "dist",
@@ -46,7 +47,7 @@
     "@types/sass": "^1.43.1",
     "codecov": "^3.8.2",
     "eslint": "^7.32.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "jest": "^27.3.1",
     "nuxt": "^2.15.8",
     "nuxt-webfontloader": "^1.1.0",
