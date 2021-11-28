@@ -33,25 +33,25 @@
     "sass": "~1.32.13",
     "sass-loader": "^12.3.0",
     "vuetify": "^2.6",
-    "vuetify-loader": "^1.7.2"
+    "vuetify-loader": "^1.7.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@nuxt/types": "^2.15.6",
+    "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
-    "@types/jest": "^26.0.23",
-    "@types/sass": "^1.16.0",
+    "@types/jest": "^26.0.24",
+    "@types/sass": "^1.43.1",
     "codecov": "^3.8.2",
-    "eslint": "^7.28.0",
+    "eslint": "^7.32.0",
     "husky": "^4.3.8",
-    "jest": "^27.0.4",
-    "nuxt": "^2.15.6",
+    "jest": "^27.3.1",
+    "nuxt": "^2.15.8",
     "nuxt-webfontloader": "^1.1.0",
-    "standard-version": "^9.3.0",
-    "ts-jest": "^27.0.3",
+    "standard-version": "^9.3.2",
+    "ts-jest": "^27.0.7",
     "typescript": "~4.0"
   }
 }
