@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.3](https://github.com/nuxt-community/vuetify-module/compare/v1.12.2...v1.12.3) (2021-12-12)
+
+
+### Bug Fixes
+
+* **deps:** revert to sass-loader v10 ([#487](https://github.com/nuxt-community/vuetify-module/issues/487)) ([50dd7d4](https://github.com/nuxt-community/vuetify-module/commit/50dd7d40299aac7d04d1e951fe8bf9b77163e72f))
+
 ### [1.12.2](https://github.com/nuxt-community/vuetify-module/compare/v1.12.1...v1.12.2) (2021-11-28)
 
 ### [1.12.1](https://github.com/nuxt-community/vuetify-module/compare/v1.12.0...v1.12.1) (2021-06-13)
