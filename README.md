@@ -11,6 +11,10 @@
 
 > [Vuetify 2](https://vuetifyjs.com) module for [Nuxt 2](https://nuxt.com)
 
+## Nuxt 3
+
+Consider using the alternative [nuxt-alt/vuetify](https://github.com/nuxt-alt/vuetify).
+
 ## Infos
 
 - [📖 **Release Notes**](./CHANGELOG.md)
