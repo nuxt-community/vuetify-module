@@ -9,7 +9,7 @@
   <a href="https://www.npmjs.com/package/@nuxtjs/vuetify"><img src="https://img.shields.io/npm/l/@nuxtjs/vuetify.svg?style=flat-square" alt="License"></a>
 </p>
 
-> [Vuetify 2](https://vuetifyjs.com) module for [Nuxt.js](https://nuxtjs.org)
+> [Vuetify 2](https://vuetifyjs.com) module for [Nuxt 2](https://nuxt.com)
 
 ## Infos
 
