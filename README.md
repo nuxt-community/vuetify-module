@@ -13,7 +13,9 @@
 
 ## Nuxt 3
 
-Consider using the alternative [nuxt-alt/vuetify](https://github.com/nuxt-alt/vuetify).
+Looking for a Nuxt 3 solution? Try out: 
+- [userquin/vuetify-nuxt-module](https://github.com/userquin/vuetify-nuxt-module)
+- [nuxt-alt/vuetify](https://github.com/nuxt-alt/vuetify)
 
 ## Infos
 
