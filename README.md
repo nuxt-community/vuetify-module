@@ -219,7 +219,7 @@ If you're using TypeScript, you'll need to add `@nuxtjs/vuetify` in your `compil
   "compilerOptions": {
     "types": [
       "@types/node",
-      "@nuxt/vue-app",
+      "@nuxt/types",
       "@nuxtjs/vuetify"
     ]
   }
