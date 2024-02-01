@@ -43,16 +43,16 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
-    "@types/jest": "^27.0.3",
+    "@types/jest": "^29.5.12",
     "@types/sass": "^1.43.1",
     "codecov": "^3.8.2",
     "eslint": "^8.3.0",
     "husky": "^7.0.4",
-    "jest": "^27.3.1",
+    "jest": "^29.7.0",
     "nuxt": "^2.15.8",
     "nuxt-webfontloader": "^1.1.0",
     "standard-version": "^9.3.2",
-    "ts-jest": "^27.0.7",
+    "ts-jest": "^29.1.2",
     "typescript": "~4.0"
   }
 }
