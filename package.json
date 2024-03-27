@@ -33,7 +33,7 @@
     "deepmerge": "^4.2.2",
     "sass": "~1.32.13",
     "sass-loader": "^10.2.0",
-    "vuetify": "^2.6",
+    "vuetify": "^3.5.12",
     "vuetify-loader": "^1.7.3"
   },
   "devDependencies": {
