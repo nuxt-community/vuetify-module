@@ -13,7 +13,8 @@
 
 ## Nuxt 3
 
-Looking for a Nuxt 3 solution? Try out: 
+Looking for a Nuxt 3 solution? Try out:
+- [vuetifyjs/nuxt-module](https://github.com/vuetifyjs/nuxt-module)
 - [userquin/vuetify-nuxt-module](https://github.com/userquin/vuetify-nuxt-module)
 - [nuxt-alt/vuetify](https://github.com/nuxt-alt/vuetify)
 
