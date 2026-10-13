@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxtjs/vuetify` was built for Nuxt 2, which reached end of life on June 30, 2024. For Nuxt 3+, see [`vuetify-nuxt-module`](https://github.com/vuetifyjs/nuxt-module).
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/904724/59509947-c14eca80-8eb2-11e9-807c-14e7cc72eecc.png" alt="nuxt-tailwindcss" width="500"/>
 </p>
